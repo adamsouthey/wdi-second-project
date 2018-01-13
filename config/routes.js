@@ -7,26 +7,16 @@ const secureRoute = require('../lib/secureRoute');
 
 router.get('/', (req, res) => res.render('statics/index'));
 
-//Disbaled seeds Search N/A
-// router.get('/search', (req, res) => {
-//   console.log(req.query.search);
-//   //(re.query.search) - .search must match <input name="search"> in layouts.ejs
-//   Movie.findOne({filmName: req.query.search})
-//     .exec()
-//     .then((movie) => {
-//       if(!movie) return res.status(404).end();
-//
-//       res.render('movie', {movie});
-//     })
-//     .catch(() =>{
-//       res.status(500).end();
-//     });
-// });
 
 
 router.route('/dives')
   .get(dives.index)
   .post(secureRoute, dives.create);
+
+
+router.route('/search')
+  .get(dives.search);
+
 
 //Group restful resources(models together in the routes file)
 //i.e
