@@ -1,4 +1,15 @@
-<form method="POST" action="/dives/<%= dive.id %>">
+<head>
+<style>
+.row{
+  margin: 0 auto;
+  width: 30%;
+}
+
+
+</style>
+</head>
+
+<form class="row" method="POST" action="/dives/<%= dive.id %>">
   <input type="hidden" name="_method" value="PUT">
   <div>
     <label for="location">Title</label>

@@ -2,20 +2,21 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Dive Reviews</title>
+  <title>Document your Dive</title>
   <% include ./partials/_stylesheets.ejs %>
   <link rel="stylesheet" href="/css/style.css">
   <script src="/js/app.js" charset="utf-8"></script>
 
-</head>
-<body>
   <% include ./partials/_scripts.ejs %>
   <% include ./partials/_navbar %>
   <% for(const type in messages) { %>
-    <div class="callout <%= type %>">
-      <h5><%= messages[type] %></h5>
-    </div>
-    <% } %>
+<div class="callout <%= type %>">
+  <h6><%= messages[type] %></h6>
+</div>
+<% } %>
+
+</head>
+<body>
     <%- body %>
   </body>
   </html>
