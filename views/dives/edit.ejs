@@ -1,0 +1,31 @@
+<form method="POST" action="/dives/<%= dive.id %>">
+  <input type="hidden" name="_method" value="PUT">
+  <div>
+    <label for="location">Title</label>
+    <input type="text" name="location" id="location" value="<%= dive.location %>" required>
+  </div>
+
+    <div>
+      <label for="difficulty">Genre</label>
+      <input type="text" name="difficulty" id="difficulty" value="<%= dive.difficulty %>" required>
+    </div>
+    <div>
+      <label for="visibility">Release Date</label>
+      <input type="text" name="visibility" id="visibility" value="<%= dive.visibility %>" required>
+    </div>
+    <div>
+      <label for="diveMonth">Director</label>
+      <input type="text" name="diveMonth" id="diveMonth" value="<%= dive.diveMonth %>" required>
+    </div>
+  </fieldset>
+  <div>
+    <label for="stars">Stars</label>
+    <input type="number" name="stars" id="stars" min="1" max="5" value="<%= dive.stars %>" required>
+  </div>
+  <div>
+    <label for="image">Image</label>
+    <input type="text" name="image" id="image" value="<%= dive.image %>" required>
+  </div>
+
+  <button class="button">Update My Dive</button>
+</form>

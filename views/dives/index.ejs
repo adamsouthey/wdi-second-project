@@ -1,0 +1,11 @@
+<div class="large-3 columns">
+<% dives.forEach((dive) => { %>
+  <div class="3 columns">
+    <a href="/dives/<%= dive.id %>">
+      <img class="thumbnail" src="<%= dive.image %>" alt="<%= dive.location %>">
+      <h2> <%= dive.location %></h2>
+      <p><% while(dive.stars--) { %> &star; <% } %></p>
+    </a>
+  </div>
+<% }) %>
+</div>

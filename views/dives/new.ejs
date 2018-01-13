@@ -1,0 +1,39 @@
+<head>
+<style>
+.newDive{
+  margin: 0 auto;
+}
+</style>
+</head>
+
+<form class="newDive" method="POST" action="/dives">
+  <div>
+    <label for="location">Dive Location</label>
+    <input type="text" name="location" id="location" required>
+  </div>
+
+
+    <div>
+      <label for="difficulty">Genre</label>
+      <input type="text" name="difficulty" id="difficulty" required>
+    </div>
+    <div>
+      <label for="visibility"> Visibility </label>
+      <input type="text" name="visibility" id="visibility" required>
+    </div>
+    <div>
+      <label for="diveMonth">Dive Month</label>
+      <input type="text" name="diveMonth" id="diveMonth" required>
+    </div>
+
+  <div>
+    <label for="stars">Stars</label>
+    <input type="number" name="stars" id="stars" min="1" max="5" required>
+  </div>
+  <div>
+    <label for="image">Image</label>
+    <input type="text" name="image" id="image" required>
+  </div>
+
+  <button class="button">Add My Dive</button>
+</form>
