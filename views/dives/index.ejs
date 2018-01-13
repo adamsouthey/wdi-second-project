@@ -1,13 +1,21 @@
 <div class="container">
-  <h1>Latest Movie Reviews</h1>
-  <div class="row">
+  <h1>Latest Dive Site Reviews</h1>
+
+  <form class="form-inline my-2 my-lg-0" action="/search" method="GET">
+    <input name="search" class="form-control mr-sm-2" type="search" placeholder="Search Dive Locations" aria-label="Search">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</div>
+
+
+<div class="row">
 <% dives.forEach((dive) => { %>
   <div class="col-md-3">
-    <a href="/dives/<%= dive.id %>">
-      <img class="thumbnail" src="<%= dive.image %>" alt="<%= dive.location %>">
-      <h2> <%= dive.location %></h2>
-      <p><% while(dive.stars--) { %> &star; <% } %></p>
-    </a>
+  <a href="/dives/<%= dive.id %>">
+  <img class="thumbnail" src="<%= dive.image %>" alt="<%= dive.location %>">
+  <h2> <%= dive.location %></h2>
+  <p><% while(dive.stars--) { %> &star; <% } %></p>
+  </a>
   </div>
-<% }) %>
+  <% }) %>
 </div>

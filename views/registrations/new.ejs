@@ -2,28 +2,38 @@
 <style>
 .registerUser{
   margin: 0 auto;
+  width: 30%;
 }
 </style>
 </head>
 
+
 <form class="registerUser" method="POST" action="/register">
+  <h1>Registration</h1>
+  <hr>
+  <h3>Personal Information</h3>
   <div>
     <label for="firstName">First Name</label>
     <input type="text" name="firstName" id="firstName" required minlength="2">
   </div>
   <div>
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email" required>
-  </div>
-
-  <div>
     <label for="lastName">Last Name</label>
     <input type="text" name="lastName" id="lastName" required minlength="2">
   </div>
   <div>
-    <label for="username">Username</label>
-    <input type="text" name="username" id="username" required>
+    <label for="divingExperience">Diving Experience</label>
+    <input type="text" name="divingExperience" id="divingExperience" required>
   </div>
+  <h3>Account Information</h3>
+    <div>
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" required>
+    </div>
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" required>
+  </div>
+
   <div>
     <label for="password">Password</label>
     <input type="password" name="password" id="password" required>
@@ -32,10 +42,7 @@
     <label for="passwordConfirmation">Password Confirmation</label>
     <input type="password" name="passwordConfirmation" id="passwordConfirmation" required>
   </div>
-  <div>
-    <label for="divingExperience">Diving Experience</label>
-    <input type="text" name="divingExperience" id="divingExperience" required>
-  </div>
 
   <button class="button">Register</button>
+
 </form>
