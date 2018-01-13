@@ -1,5 +1,5 @@
 {
-  "name": "rest-comments",
+  "name": "WDI-project-2",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -22,7 +22,6 @@
     "express-ejs-layouts": "^2.2.0",
     "express-flash": "^0.0.2",
     "express-session": "^1.15.6",
-    "geocoder": "^0.2.3",
     "method-override": "^2.3.10",
     "mongoose": "^5.0.0-rc2",
     "morgan": "^1.8.1",

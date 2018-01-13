@@ -29,7 +29,7 @@ const diveSchema = new mongoose.Schema({
   // check if the user who created the hotel is the same person who is logged in
   //'this' is the instance of the hotel that we are calling the 'belongsTo' method on
   //'user' is the user object that we will pass this method (the user who is logged in)
-movieSchema.methods.belongsTo = function belongsTo(user) {
+diveSchema.methods.belongsTo = function belongsTo(user) {
   return this.createdBy.id === user.id;
 };
 
