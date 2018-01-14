@@ -10,7 +10,7 @@ function indexRoute(req, res, next) {
     .catch(next);
 }
 
-function searchDive (req,res) {
+function searchLocation (req,res) {
   Dive.find({location: req.query.search})
     .exec()
     .then((dives) => {
@@ -22,6 +22,9 @@ function searchDive (req,res) {
       res.status(500).end();
     });
 }
+
+
+
 
 function newRoute(req, res) {
   return res.render('dives/new');
@@ -140,7 +143,7 @@ function deleteCommentRoute(req, res, next) {
 
 module.exports = {
   index: indexRoute,
-  search: searchDive,
+  search: searchLocation,
   new: newRoute,
   create: createRoute,
   show: showRoute,
