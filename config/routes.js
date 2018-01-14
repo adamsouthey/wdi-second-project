@@ -8,7 +8,6 @@ const secureRoute = require('../lib/secureRoute');
 router.get('/', (req, res) => res.render('statics/index'));
 
 
-
 router.route('/dives')
   .get(dives.index)
   .post(secureRoute, dives.create);
@@ -16,6 +15,8 @@ router.route('/dives')
 
 router.route('/search')
   .get(dives.search);
+
+
 
 
 //Group restful resources(models together in the routes file)

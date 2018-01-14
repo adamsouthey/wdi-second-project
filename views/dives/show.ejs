@@ -1,15 +1,39 @@
+<!DOCTYPE html>
+<html>
 <head>
-<style>
-.row{
-  margin: 0 auto;
-}
-img{
-  height: 300px;
-  width: 340px;
-}
+  <meta charset="utf-8">
+  <title>Google Maps</title>
 
-</style>
+  <style>
+  #map{
+    height: 400px;
+    width: 30%;
+    float: right;
+  }
+  </style>
 </head>
+<body>
+  <h1> My Google Map</h1>
+  <div id="map"></div>
+  <script>
+  function initMap(){
+    var options = {
+      zoom: 9,
+      center: {lat: 13.1939, lng: -59.5432}
+    }
+    var map = new google.maps.Map(document.getElementById('map'), options);
+    var marker = new google.maps.Marker({
+      position: {lat: 13.193887, lng: -59.543198},
+      map: map
+    })
+  }
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrtcmIslpCrYOwZ-RhOk1eBWKHDXBHajY&callback=initMap">
+  </script>
+
+</body>
+</html>
 
 
 <div class="large-3 columns">
@@ -27,36 +51,35 @@ img{
     <% while(dive.stars--) { %> &star; <% } %>
   </p>
 
-<% if(locals.isLoggedIn && dive.belongsTo(user)) { %>
-  <a href="/dives/<%= dive.id %>/edit">Edit</a>
-  <form method="POST" action="/dives/<%= dive.id %>">
+  <% if(locals.isLoggedIn && dive.belongsTo(user)) { %>
+    <a href="/dives/<%= dive.id %>/edit">Edit</a>
+    <form method="POST" action="/dives/<%= dive.id %>">
     <input type="hidden" name="_method" value="DELETE">
     <button>Delete</button>
-  </form>
-<% } %>
+    </form>
+    <% } %>
 
 
-<%#  COMMENT FORM %>
-<% dive.comments.forEach((comment) => { %>
-    <p><%= comment.content %></p>
-    <small><%= comment.createdBy.username %></small>
+    <%#  COMMENT FORM %>
+    <% dive.comments.forEach((comment) => { %>
+      <p><%= comment.content %></p>
+      <small><%= comment.createdBy.username %></small>
 
-    <% if(locals.isLoggedIn && comment.belongsTo(user)) { %>
-      <form method="POST" action="/dive/<%= dive.id %>/comments/<%= comment.id %>">
+      <% if(locals.isLoggedIn && comment.belongsTo(user)) { %>
+        <form method="POST" action="/dive/<%= dive.id %>/comments/<%= comment.id %>">
         <input type="hidden" name="_method" value="DELETE">
         <button>Delete</button>
-      </form>
-    <% } %>
-  <% }) %>
+        </form>
+        <% } %>
+        <% }) %>
 
-<% if(locals.isLoggedIn) { %>
-  <section>
-    <h4>Leave a comment</h4>
-    <form method="POST" action="/dives/<%= dive.id %>/comments">
-      <textarea name="content" id="content" placeholder="Comment"></textarea>
-      <button class="button">Leave a comment</button>
-    </form>
-  </section>
-<% } %>
-
-</div>
+        <% if(locals.isLoggedIn) { %>
+          <section>
+          <h4>Leave a comment</h4>
+          <form method="POST" action="/dives/<%= dive.id %>/comments">
+          <textarea name="content" id="content" placeholder="Comment"></textarea>
+          <button class="button">Leave a comment</button>
+          </form>
+          </section>
+          <% } %>
+        </div>
