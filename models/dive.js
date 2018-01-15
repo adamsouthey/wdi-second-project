@@ -21,6 +21,8 @@ const diveSchema = new mongoose.Schema({
   diveMonth: { type: String, required: true },
   image: { type: String, required: true },
   stars: { type: Number, required: true },
+  latitude: {type: Number, required: true},
+  longitude: {type: Number, required: true},
   createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true},
   comments: [commentSchema]
 });

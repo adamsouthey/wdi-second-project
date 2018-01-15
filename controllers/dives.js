@@ -10,6 +10,7 @@ function indexRoute(req, res, next) {
     .catch(next);
 }
 
+//Search function
 function searchLocation (req,res) {
   const query = {};
   if(req.query.location) query.location = req.query.location;
