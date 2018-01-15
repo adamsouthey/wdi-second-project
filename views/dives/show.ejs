@@ -24,6 +24,11 @@
         center:{lat:13.1939,lng:-59.5432}
       }
 
+      // var api =
+      // var location=
+      // var apiKey =
+      // var URL =
+
       // New map
       var map = new google.maps.Map(document.getElementById('map'), options);
 
@@ -32,6 +37,9 @@
         // Add marker
         addMarker({coords:event.latLng});
 
+        console.log(event.latLng.lat());
+        console.log(event.latLng.lng());
+
       });
 
 
@@ -39,7 +47,7 @@
       var markers = [
         {
           coords:{lat:13.1939,lng:-59.5432},
-          iconImage:'http://picresize.com/images/rsz_1diver_avatar.png',
+          iconImage:'https://png.icons8.com/ios/2x/scuba-diving.png',
           content:'<h1>Barbados</h1>'
         }
       ];
@@ -93,7 +101,7 @@
     <h6>Difficulty: <%= dive.difficulty %><br></h6>
     <h6>Visibility: <%= dive.visibility %><br></h6>
     <h6>Dive Month: <%= dive.diveMonth %><br></h6>
-    
+
     <% while(dive.stars--) { %> &star; <% } %>
 
 

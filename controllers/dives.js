@@ -11,7 +11,12 @@ function indexRoute(req, res, next) {
 }
 
 function searchLocation (req,res) {
-  Dive.find({location: req.query.search})
+  const query = {};
+  if(req.query.location) query.location = req.query.location;
+  if(req.query.stars) query.stars = req.query.stars;
+
+
+  Dive.find(query)
     .exec()
     .then((dives) => {
       if(!dives) return res.status(404).end();
@@ -31,9 +36,9 @@ function newRoute(req, res) {
 }
 
 function createRoute(req, res, next) {
-  console.log(req.body);// this would just be the form data (without the user information)
+  console.log(req.body);
 
-  // create a new property called createdBy and make it equal to the logged in user
+
   req.body.createdBy = req.user;
 
   Dive

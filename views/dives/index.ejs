@@ -20,17 +20,17 @@ h2{
 
 </style>
 </head>
-<div class='background'>
 <div class="row">
   <div class="col-md-3">
   <form class="form-inline my-2 my-lg-0" action="/search" method="GET">
-    <input name="search" class="form-control mr-sm-2" type="search" placeholder="Search Dive Locations" aria-label="Search">
+    <input name="location" class="form-control mr-sm-2" type="search" placeholder="Search by location" aria-label="Search">
+    <input name="stars" class="form-control mr-sm-2" type="search" placeholder="Search by rating" aria-label="Search">
     <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
   </form>
 </div>
 </div>
 
-
+<div class="background">
 <div class="row">
 <% dives.forEach((dive) => { %>
   <div class="col-md-3">
