@@ -1,14 +1,15 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <title>My Google Map</title>
   <style>
     #map{
-      height:400px;
-      width:30%;
+      height:40%;
+      width:50%;
       float: right;
     }
   </style>
@@ -16,43 +17,34 @@
 <body>
   <h1>My Google Map</h1>
   <div id="map"></div>
+
+
   <script>
+  var lat = parseFloat(<%= dive.latitude %>)
+  var long = parseFloat(<%= dive.longitude %>)
+init();
     function initMap(){
       // Map options
       var options = {
-        zoom:10,
-        center:{lat:13.1939,lng:-59.5432}
+        icon: 'https://image.flaticon.com/icons/png/128/8/8732.png',
+        zoom:4,
+        center: new google.maps.LatLng(lat, long)
       }
 
+      console.log(lat);
+      console.log(long);
 
 
-      // New map
+      // console.log(<%= dive.latitude %>);
+      // console.log(<%= dive.longitude %>);
+      // Map with user lat + user long
       var map = new google.maps.Map(document.getElementById('map'), options);
-
-      // Listen for click on map
-      google.maps.event.addListener(map, 'click', function(event){
-        // Add marker
-        addMarker({coords:event.latLng});
-
-        console.log(event.latLng.lat());
-        console.log(event.latLng.lng());
-
-        // take the lat and lng data and update the value of two hidden input fields - check that the name attribute matches the field in the model
-        // first, just make them text fields (make them disabled)
-
-        // then make them hidden
-
-        // printing the lat and lng as data-lat and data-lng on the map div
-
-      });
-
-
       // Array of markers
       var markers = [
         {
-          coords:{lat:13.1939,lng:-59.5432},
+          coords:{lat,long},
           iconImage:'https://png.icons8.com/ios/2x/scuba-diving.png',
-          content:'<h1>Barbados</h1>'
+          content:'<h1>Yes</h1>'
         }
       ];
 
@@ -69,33 +61,14 @@
           map:map,
           //icon:props.iconImage
         });
-
-        // Check for customicon
-        if(props.iconImage){
-          // Set icon image
-          marker.setIcon(props.iconImage);
-        }
-
-        // Check content
-        if(props.content){
-          var infoWindow = new google.maps.InfoWindow({
-            content:props.content
-          });
-
-          marker.addListener('click', function(){
-            infoWindow.open(map, marker);
-          });
-        }
-      }
     }
+  }
   </script>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdkcW4aAFU9BcPMx0ATMvnPY3aVuGtAKY&callback=initMap">
     </script>
 </body>
-</html> -->
-
-
+</html>
 <div class="large-3 columns">
   <img src="<%= dive.image %>" alt="<%= dive.location %>">
   <h4>UserProfile</h4>
@@ -107,8 +80,9 @@
     <h6>Dive Month: <%= dive.diveMonth %><br></h6>
     <h6>Dive Latitude: <%= dive.latitude %><br></h6>
     <h6>Dive Longitude: <%= dive.longitude %><br></h6>
-
     <% while(dive.stars--) { %> &star; <% } %>
+
+
 
 
   <% if(locals.isLoggedIn && dive.belongsTo(user)) { %>

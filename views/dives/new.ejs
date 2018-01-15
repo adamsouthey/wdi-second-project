@@ -17,7 +17,9 @@
 <body>
   <h1>My Google Map</h1>
   <div id="map"></div>
+
   <script>
+
 
     function initMap(){
       // Map options
@@ -50,6 +52,8 @@
         //On click, inputs Lat cooridnate to hidden long input field. Name must match schema input
         const $longitude = $('#longitude');
         $longitude.val(event.latLng.lng);
+
+
 
 
         // printing the lat and lng as data-lat and data-lng on the map div
