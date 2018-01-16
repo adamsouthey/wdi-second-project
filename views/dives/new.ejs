@@ -1,162 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <title>My Google Map</title>
-  <style>
-    #map{
-      height:40%;
-      width:30%;
-      float: right;
-    }
-  </style>
-</head>
-<body>
-  <h1>My Google Map</h1>
-  <div id="map"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div id="map"></div>
+    </div>
+    <div class="col-6">
+      <form class="newDive" method="POST" action="/dives">
+        <div>
+          <label for="location">Dive Location</label>
+          <input type="text" name="location" id="location" required>
+        </div>
 
-  <script>
+        <div>
+          <label for="difficulty">Dive Difficulty</label>
+          <input type="text" name="difficulty" id="difficulty" required>
+        </div>
+        <div>
+          <label for="visibility"> Visibility </label>
+          <input type="text" name="visibility" id="visibility" required>
+        </div>
+        <div>
+          <label for="diveMonth">Dive Month</label>
+          <input type="text" name="diveMonth" id="diveMonth" required>
+        </div>
 
+        <div>
+          <label for="stars">Stars</label>
+          <input type="number" name="stars" id="stars" min="1" max="5" required>
+        </div>
+        <div>
+          <label for="image">Image</label>
+          <input type="text" name="image" id="image" required>
+        </div>
+        <div>
+          <label for="lat">Latitude</label>
+          <input type="text" name="latitude" id="lat" required>
+        </div>
+        <div>
+          <label for="lng">Longitude</label>
+          <input type="text" name="longitude" id="lng" required>
+        </div>
 
-    function initMap(){
-      // Map options
-      var options = {
-        zoom:10,
-        center:{lat:13.1939,lng:-59.5432}
-      }
-
-
-
-      // New map
-      var map = new google.maps.Map(document.getElementById('map'), options);
-
-      // Listen for click on map
-
-
-
-
-      google.maps.event.addListener(map, 'click', function(event){
-        // Add marker
-        addMarker({coords:event.latLng});
-
-        console.log(event.latLng.lat());
-        console.log(event.latLng.lng());
-
-        //On click, update lat cooridnate to hidden lat input field. Name must match schema input
-        const $latitude = $('#latitude');
-        $latitude.val(event.latLng.lat);
-
-        //On click, inputs Lat cooridnate to hidden long input field. Name must match schema input
-        const $longitude = $('#longitude');
-        $longitude.val(event.latLng.lng);
-
-
-
-
-        // printing the lat and lng as data-lat and data-lng on the map div
-
-      });
-
-
-      // Array of markers
-      var markers = [
-        {
-          coords:{lat:13.1939,lng:-59.5432},
-          iconImage:'https://png.icons8.com/ios/2x/scuba-diving.png',
-          content:'<h1>Barbados</h1>'
-        }
-      ];
-
-      // Loop through markers
-      for(var i = 0;i < markers.length;i++){
-        // Add marker
-        addMarker(markers[i]);
-      }
-
-      // Add Marker Function
-      function addMarker(props){
-        var marker = new google.maps.Marker({
-          position:props.coords,
-          map:map,
-          //icon:props.iconImage
-        });
-
-        // Check for customicon
-        if(props.iconImage){
-          // Set icon image
-          marker.setIcon(props.iconImage);
-        }
-
-        // Check content
-        if(props.content){
-          var infoWindow = new google.maps.InfoWindow({
-            content:props.content
-          });
-
-          marker.addListener('click', function(){
-            infoWindow.open(map, marker);
-          });
-        }
-      }
-    }
-  </script>
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdkcW4aAFU9BcPMx0ATMvnPY3aVuGtAKY&callback=initMap">
-    </script>
-</body>
-</html>
-
-<head>
-  <style>
-  .newDive{
-    margin: 0 auto;
-    width: 20%;
-
-  }
-
-
-</style>
-</head>
-
-<form class="newDive" method="POST" action="/dives">
-  <div>
-    <label for="location">Dive Location</label>
-    <input type="text" name="location" id="location" required>
+        <button type="submit" class="button">Add My Dive</button>
+      </form>
+    </div>
   </div>
-
-
-  <div>
-    <label for="difficulty">Dive Difficulty</label>
-    <input type="text" name="difficulty" id="difficulty" required>
-  </div>
-  <div>
-    <label for="visibility"> Visibility </label>
-    <input type="text" name="visibility" id="visibility" required>
-  </div>
-  <div>
-    <label for="diveMonth">Dive Month</label>
-    <input type="text" name="diveMonth" id="diveMonth" required>
-  </div>
-
-  <div>
-    <label for="stars">Stars</label>
-    <input type="number" name="stars" id="stars" min="1" max="5" required>
-  </div>
-  <div>
-    <label for="image">Image</label>
-    <input type="text" name="image" id="image" required>
-  </div>
-  <div>
-    <label for="latitude">Latitude</label>
-    <input type="text" name="latitude" id="latitude" required>
-  </div>
-  <div>
-    <label for="longitude">Longitude</label>
-    <input type="text" name="longitude" id="longitude" required>
-  </div>
-
-  <button class="button">Add My Dive</button>
-</form>
+</div>

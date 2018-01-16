@@ -1,121 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <title>My Google Map</title>
-  <style>
-    #map{
-      height:400px;
-      width:500px;
-      float: right;
-    }
-  </style>
+<div class="container showDive">
+  <div class="row">
 
+    <div class="col-6">
+      <img src="<%= dive.image %>" alt="<%= dive.location %>">
+      <h4>UserProfile</h4>
+      <h6> Name: <%= dive.createdBy.username %></h6>
+      <h6>Location:<%= dive.location %></h6>
 
-</head>
-<body>
-  <h1>My Google Map</h1>
-  <div id="map"></div>
+      <h6>Difficulty: <%= dive.difficulty %><br></h6>
+      <h6>Visibility: <%= dive.visibility %><br></h6>
+      <h6>Dive Month: <%= dive.diveMonth %><br></h6>
+      <input type="hidden" name="latitude" value="<%= dive.latitude %>" />
+      <input type="hidden" name="longitude" value="<%= dive.longitude %>" />
+      <% while(dive.stars--) { %> &star; <% } %>
 
+      <hr>
 
-  <script>
-  var lat = parseFloat(<%= dive.latitude %>)
-  var long = parseFloat(<%= dive.longitude %>)
-init();
-    function initMap(){
-      // Map options
-      var options = {
-        icon: 'https://image.flaticon.com/icons/png/128/8/8732.png',
-        zoom:8,
-        center: new google.maps.LatLng(lat, long)
-      }
+      <% if(locals.isLoggedIn && dive.belongsTo(user)) { %>
+        <a href="/dives/<%= dive.id %>/edit">Edit</a>
 
-      console.log(lat);
-      console.log(long);
-
-
-      // console.log(<%= dive.latitude %>);
-      // console.log(<%= dive.longitude %>);
-      // Map with user lat + user long
-      var map = new google.maps.Map(document.getElementById('map'), options);
-      // Array of markers
-      var markers = [
-        {
-          coords:{lat,long},
-          iconImage:'https://png.icons8.com/ios/2x/scuba-diving.png',
-          content:'<h1>Yes</h1>'
-        }
-      ];
-
-      // Loop through markers
-      for(var i = 0;i < markers.length;i++){
-        // Add marker
-        addMarker(markers[i]);
-      }
-
-      // Add Marker Function
-      function addMarker(props){
-        var marker = new google.maps.Marker({
-          position:props.coords,
-          map:map,
-          //icon:props.iconImage
-        });
-    }
-  }
-  </script>
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdkcW4aAFU9BcPMx0ATMvnPY3aVuGtAKY&callback=initMap">
-    </script>
-</body>
-</html>
-<div class="large-3 columns">
-  <img src="<%= dive.image %>" alt="<%= dive.location %>">
-  <h4>UserProfile</h4>
-    <h6> Name: <%= dive.createdBy.username %></h6>
-    <h6>Location:<%= dive.location %></h6>
-
-    <h6>Difficulty: <%= dive.difficulty %><br></h6>
-    <h6>Visibility: <%= dive.visibility %><br></h6>
-    <h6>Dive Month: <%= dive.diveMonth %><br></h6>
-    <h6>Dive Latitude: <%= dive.latitude %><br></h6>
-    <h6>Dive Longitude: <%= dive.longitude %><br></h6>
-    <% while(dive.stars--) { %> &star; <% } %>
-
-
-
-
-  <% if(locals.isLoggedIn && dive.belongsTo(user)) { %>
-    <a href="/dives/<%= dive.id %>/edit">Edit</a>
-    <form method="POST" action="/dives/<%= dive.id %>">
-    <input type="hidden" name="_method" value="DELETE">
-    <button>Delete</button>
-    </form>
-    <% } %>
-
-
-    <%#  COMMENT FORM %>
-    <% dive.comments.forEach((comment) => { %>
-      <p><%= comment.content %></p>
-      <small><%= comment.createdBy.username %></small>
-
-      <% if(locals.isLoggedIn && comment.belongsTo(user)) { %>
-        <form method="POST" action="/dive/<%= dive.id %>/comments/<%= comment.id %>">
-        <input type="hidden" name="_method" value="DELETE">
-        <button>Delete</button>
+        <form method="POST" action="/dives/<%= dive.id %>">
+          <input type="hidden" name="_method" value="DELETE">
+          <button>Delete</button>
         </form>
-        <% } %>
-        <% }) %>
+      <% } %>
+    </div>
 
-        <% if(locals.isLoggedIn) { %>
-          <section>
+    <div class="col-6">
+      <div id="map"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <% dive.comments.forEach((comment) => { %>
+        <p><%= comment.content %></p>
+        <small><%= comment.createdBy.username %></small>
+
+        <% if(locals.isLoggedIn && comment.belongsTo(user)) { %>
+          <form method="POST" action="/dives/<%= dive.id %>/comments/<%= comment.id %>">
+            <input type="hidden" name="_method" value="DELETE">
+            <button>Delete</button>
+          </form>
+        <% } %>
+      <% }) %>
+
+      <% if(locals.isLoggedIn) { %>
+        <section>
           <h4>Leave a comment</h4>
           <form method="POST" action="/dives/<%= dive.id %>/comments">
-          <textarea name="content" id="content" placeholder="Comment"></textarea>
-          <button class="button">Leave a comment</button>
+            <textarea name="content" id="content" placeholder="Comment"></textarea>
+            <button class="button">Leave a comment</button>
           </form>
-          </section>
-          <% } %>
-        </div>
+        </section>
+      <% } %>
+    </div>
+  </div>
+</div>

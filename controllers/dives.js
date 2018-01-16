@@ -88,7 +88,7 @@ function updateRoute(req, res, next) {
 
       return dive.save();
     })
-    .then(() => res.redirect(`/dives/${req.params.id}`))
+    .then(dive => res.redirect(`/dives/${dive.id}`))
     .catch((err) => {
       if(err.name === 'ValidationError') {
         return res.badRequest(`/dives/${req.params.id}/edit`, err.toString());
@@ -111,7 +111,6 @@ function deleteRoute(req, res, next) {
 
 // CREATE A COMMENT --->
 function createCommentRoute(req, res, next) {
-
   req.body.createdBy = req.user; //attach the logged in user to the body of the request
 
   Dive

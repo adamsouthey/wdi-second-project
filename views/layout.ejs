@@ -5,18 +5,22 @@
   <title>Document your Dive</title>
   <% include ./partials/_stylesheets.ejs %>
   <link rel="stylesheet" href="/css/style.css">
-  <script src="/js/app.js" charset="utf-8"></script>
 
   <% include ./partials/_scripts.ejs %>
-  <% include ./partials/_navbar %>
-  <% for(const type in messages) { %>
-<div class="callout <%= type %>">
-  <h6><%= messages[type] %></h6>
-</div>
-<% } %>
-
+  <script src="/js/app.js" charset="utf-8"></script>
 </head>
 <body>
+  <header>
+    <% include ./partials/_navbar %>
+
+    <% for(const type in messages) { %>
+      <div class="callout <%= type %>">
+        <h6><%= messages[type] %></h6>
+      </div>
+    <% } %>
+  </header>
+  <main>
     <%- body %>
-  </body>
-  </html>
+  </main>
+</body>
+</html>
