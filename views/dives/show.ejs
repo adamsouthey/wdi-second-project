@@ -1,12 +1,21 @@
-<div class="showDive">
+
+    <div class="jumbotron jumbotron-fluid" id="jumbo">
+    <div class="container">
+      <div class="row">
+        <div class="offset-md-1">
+        </div>
+        </div>
+        </div>
+
+    <div class="showDive">
   <div class="row">
 
 
     <div class="showLeft">
-    <div class="col-6">
+    <div>
       <img src="<%= dive.image %>" alt="<%= dive.location %>">
       <div class="showLeftText">
-      <h4>User Review</h4>
+
       <h6> Username: <%= dive.createdBy.username %></h6>
       <h6>Location:<%= dive.location %></h6>
 
@@ -18,8 +27,7 @@
       <% while(dive.stars--) { %> &star; <% } %>
     </div>
 </div>
-      <hr>
-      <hr>
+    </div>
 
       <% if(locals.isLoggedIn && dive.belongsTo(user)) { %>
         <a href="/dives/<%= dive.id %>/edit">Edit</a>
@@ -29,9 +37,9 @@
           <button>Delete</button>
         </form>
       <% } %>
-    </div>
+
 <div class="showRight">
-    <div class="col-6">
+    <div class="col-8">
       <div id="map"></div>
     </div>
   </div>
@@ -48,18 +56,18 @@
             <div class="panel panel-white post panel-shadow">
                 <div class="post-heading">
 
-                    <hr>
+
                     <div class="pull-left meta">
                         <div class="commentsForm">
 
                           <% dive.comments.forEach((comment) => { %>
                               <div class="pull-left image">
-                              <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
+
                               </div>
                             <p><%= comment.content %></p>
 
                             <small><%= comment.createdBy.username %></small>
-                            <hr>
+
 
                             <% if(locals.isLoggedIn && comment.belongsTo(user)) { %>
                               <form method="POST" action="/dives/<%= dive.id %>/comments/<%= comment.id %>">
@@ -67,16 +75,17 @@
                                 <button>Delete</button>
                               </form>
                             <% } %>
+
                           <% }) %>
+                          <hr>
                     </div>
                 </div>
                 <div class="post-description">
                   <% if(locals.isLoggedIn) { %>
                     <section>
-
-                      <form method="POST" action="/dives/<%= dive.id %>/comments">
-                        <textarea name="content" id="content" placeholder="Comment"></textarea>
-                        <button class="button">Leave a comment</button>
+                      <form id="formComments" method="POST" action="/dives/<%= dive.id %>/comments">
+                        <textarea name="content" id="content" placeholder="Please leave a comment here"></textarea>
+                        <button class="btn" id="buttonShow">Comment</button>
                       </form>
                     </section>
                   <% } %>
