@@ -5,7 +5,7 @@ const dives = require('../controllers/dives');
 const secureRoute = require('../lib/secureRoute');
 
 
-router.get('/', (req, res) => res.render('statics/index'));
+router.get('/', (req, res) => res.render('statics/index', { isHomepage: true }));
 
 
 router.route('/dives')

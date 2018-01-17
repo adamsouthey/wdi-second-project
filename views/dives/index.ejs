@@ -1,25 +1,5 @@
-<head>
-<style>
-.row{
-  margin: 0 auto;
-}
-img{
-  height: 200px;
-  width: 300px;
 
-}
-.thumbnail{
-    border-color: #003366;
-}
-.background{
-  background: #003366;
-}
-h2{
-  color: white;
-}
 
-</style>
-</head>
 <div class="row">
   <div class="col-md-3">
   <form class="form-inline my-2 my-lg-0" action="/search" method="GET">
@@ -30,6 +10,7 @@ h2{
 </div>
 </div>
 
+<div class = "imagesIndex">
 <div class="background">
 <div class="row">
 <% dives.forEach((dive) => { %>
@@ -41,5 +22,6 @@ h2{
   </a>
   </div>
   <% }) %>
+</div>
 </div>
 </div>

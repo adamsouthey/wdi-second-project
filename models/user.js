@@ -6,8 +6,7 @@ const userSchema = new mongoose.Schema({
   lastName: { type: String, minlength: 2, required: true, trim: true },
   email: { type: String, required: true, trim: true, unique: true },
   username: { type: String, required: true, trim: true, unique: true },
-  password: { type: String, required: true },
-  divingExperience: {type: String, required: true}
+  password: { type: String, required: true }
   // admin: {type: Boolean, default: false}
 });
 

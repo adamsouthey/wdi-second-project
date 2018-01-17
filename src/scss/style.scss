@@ -1,17 +1,110 @@
 #map {
-  height:40%;
-  width:30%;
-  float: right;
+  height:300px;
+  width:400px;
 }
 
-body
-{
-    // background: url('https://www.scubadivingintro.com/sites/scubadivingintro.com/files/styles/2000_1x_/public/custom-touts/2016/09/opener-tout.jpg?itok=b0RVvFcI&fc=50,50') fixed;
+img{
+  height: 300px;
+  width: 300px;
+  border-radius:20%;
+    overflow:hidden;
+}
+
+.showLeft{
+  height: 200px;
+ width: 250px;
+ max-width: 100%;
+ text-align: center;
+ display: block;
+   margin-left: auto;
+   margin-right: auto;
+   color: white;
+}
+
+.showLeftText h6{
+   color: black;
+   font-size: 10px;
+
+}
+
+
+.showRight{
+  height: 200px;
+  width: 350px;
+  max-width: 100%;
+  text-align: center;
+  display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+#showPageLeftTop, #showPageLeftBottom  {
+font-size: 18px;
+width: 100%;
+color: white;
+}
+
+#jumbo{
+  background-color: black;
+  background-size: cover;
+  height: 10px;
+  color: white;
+  margin-bottom: 1px;
+}
+
+
+.top-bar{
+  font-size: 16px;
+  color: white;
+}
+.top-bar a{
+  color: white;
+  font-family: 'Archivo Black', sans-serif;
+}
+
+.thumbnail {
+  height: 150px;
+  width: 220px;
+  max-width: 100%;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  border-radius:20%;
+  overflow:hidden;
+  }
+
+
+.thumbnail:hover {
+  opacity:0.7;
+}
+
+  h2, p {
+    text-align: center;
+    color: black;
+  }
+
+
+body {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHQhEop9bfbCB1tqMcxmk8hPYdV8jgElLSVq8xm1uL-jR0kVnU');
+  background-size: 100% 100%;
+  background-repeat: repeat;
+  height: 100vh;
+  background-position: cover;
+
+  &.homepage {
+    background: url('http://www.wondermondo.com/Images/NAmerica/Bermuda/Bermuda/BermudaCave.jpg') fixed;
     background-size: cover;
-    background-position: top;
+    background-position: 8px 8px;
     padding: 0;
     margin: 0;
+  }
 }
+
+
 
 .wrap
 {
@@ -39,9 +132,9 @@ p.form-title
 
 form
 {
-    width: 350px;
+    width: 250px;
     margin: 0 auto;
-    float: right;
+
 
 }
 
@@ -61,6 +154,7 @@ form.login input[type="text"], form.login input[type="password"]
     margin-bottom: 5px;
     color: #FFFFFF;
     outline: 0;
+    color: white;
 }
 
 form.login input[type="submit"]
@@ -189,4 +283,8 @@ form.login a:hover
     background-color: rgba(0, 0, 0, 0.66);
     padding: 10px;
     left: 45%;
+}
+
+.img-circle avatar{
+  width: 100px;
 }

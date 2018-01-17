@@ -9,7 +9,7 @@
   <% include ./partials/_scripts.ejs %>
   <script src="/js/app.js" charset="utf-8"></script>
 </head>
-<body>
+<body <% if(locals.isHomepage) { %>class="homepage"<% } %>>
   <header>
     <% include ./partials/_navbar %>
 

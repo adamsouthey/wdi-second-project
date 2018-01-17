@@ -1,10 +1,13 @@
-<div class="container showDive">
+<div class="showDive">
   <div class="row">
 
+
+    <div class="showLeft">
     <div class="col-6">
       <img src="<%= dive.image %>" alt="<%= dive.location %>">
-      <h4>UserProfile</h4>
-      <h6> Name: <%= dive.createdBy.username %></h6>
+      <div class="showLeftText">
+      <h4>User Review</h4>
+      <h6> Username: <%= dive.createdBy.username %></h6>
       <h6>Location:<%= dive.location %></h6>
 
       <h6>Difficulty: <%= dive.difficulty %><br></h6>
@@ -13,7 +16,9 @@
       <input type="hidden" name="latitude" value="<%= dive.latitude %>" />
       <input type="hidden" name="longitude" value="<%= dive.longitude %>" />
       <% while(dive.stars--) { %> &star; <% } %>
-
+    </div>
+</div>
+      <hr>
       <hr>
 
       <% if(locals.isLoggedIn && dive.belongsTo(user)) { %>
@@ -25,34 +30,60 @@
         </form>
       <% } %>
     </div>
-
+<div class="showRight">
     <div class="col-6">
       <div id="map"></div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-12">
-      <% dive.comments.forEach((comment) => { %>
-        <p><%= comment.content %></p>
-        <small><%= comment.createdBy.username %></small>
+  </div>
 
-        <% if(locals.isLoggedIn && comment.belongsTo(user)) { %>
-          <form method="POST" action="/dives/<%= dive.id %>/comments/<%= comment.id %>">
-            <input type="hidden" name="_method" value="DELETE">
-            <button>Delete</button>
-          </form>
-        <% } %>
-      <% }) %>
 
-      <% if(locals.isLoggedIn) { %>
-        <section>
-          <h4>Leave a comment</h4>
-          <form method="POST" action="/dives/<%= dive.id %>/comments">
-            <textarea name="content" id="content" placeholder="Comment"></textarea>
-            <button class="button">Leave a comment</button>
-          </form>
-        </section>
-      <% } %>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <div class="panel panel-white post panel-shadow">
+                <div class="post-heading">
+
+                    <hr>
+                    <div class="pull-left meta">
+                        <div class="commentsForm">
+
+                          <% dive.comments.forEach((comment) => { %>
+                              <div class="pull-left image">
+                              <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
+                              </div>
+                            <p><%= comment.content %></p>
+
+                            <small><%= comment.createdBy.username %></small>
+                            <hr>
+
+                            <% if(locals.isLoggedIn && comment.belongsTo(user)) { %>
+                              <form method="POST" action="/dives/<%= dive.id %>/comments/<%= comment.id %>">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button>Delete</button>
+                              </form>
+                            <% } %>
+                          <% }) %>
+                    </div>
+                </div>
+                <div class="post-description">
+                  <% if(locals.isLoggedIn) { %>
+                    <section>
+
+                      <form method="POST" action="/dives/<%= dive.id %>/comments">
+                        <textarea name="content" id="content" placeholder="Comment"></textarea>
+                        <button class="button">Leave a comment</button>
+                      </form>
+                    </section>
+                  <% } %>
+
+                </div>
+            </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
