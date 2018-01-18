@@ -1,25 +1,30 @@
+<div class="jumbotron jumbotron-fluid" id="jumbo">
+<div class="container">
+  <div class="row">
+    <div class="offset-md-1">
+    </div>
+    </div>
+    </div>
 
+    <div class="fixbar">
+    <div id="search">
 
+      <input name="location" type="search" placeholder="Search By Location" aria-label="Search">
+    <input name="stars" type="search" placeholder="Search By Rating" aria-label="Search">
+<button type="submit" class="button">Search</button>
 
-
-
-<div class="top-bar">
-  <div class="top-bar-left">
-    <ul class="dropdown menu" id="dropdownmenu" data-dropdown-menu>
-        <h1><a href="/">DocuDive</a></h1>
-    </ul>
-  </div>
-  <div class="top-bar-right" id="topRight">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <a href="/dives">Dives</a>
-
-      <% if(!locals.isLoggedIn) { %>
-        <a href="/register">Sign Up</a>
-        <a href="/login">Login</a>
-      <% } else { %>
-        <a href="/dives/new">Add a dive</a>
-      <a href="/logout">Logout</a>
-      <% } %>
-    </ul>
-  </div>
+    </div>
+</div>
+    <div id="navbar">
+  <ul>
+	<li><a id="docuDiveHome" href="/">DocuDive Home</a></li>
+	<li><a href="/dives">Logged Dives</a></li>
+  <% if(!locals.isLoggedIn) { %>
+	<li><a href="/register">Register</a></li>
+	<li><a href="/login">Login</a></li>
+    <% } else { %>
+	<li><a href="/dives/new">Share your Dive Experience</a></li>
+	<li><a href="/logout">Logout</a></li>
+    <% } %>
+  </ul>
 </div>

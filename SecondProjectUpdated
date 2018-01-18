@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div id="map"></div>
+    </div>
+    <div class="col-6">
+      <form class="newDive" method="POST" action="/dives">
+        <div>
+          <label for="location">Dive Location</label>
+          <input type="text" name="location" id="location" required>
+        </div>
+
+        <div>
+          <label for="difficulty">Dive Difficulty</label>
+          <input type="text" name="difficulty" id="difficulty" required>
+        </div>
+        <div>
+          <label for="visibility"> Visibility </label>
+          <input type="text" name="visibility" id="visibility" required>
+        </div>
+        <div>
+          <label for="diveMonth">Dive Month</label>
+          <input type="text" name="diveMonth" id="diveMonth" required>
+        </div>
+
+        <div>
+          <label for="stars">Stars</label>
+          <input type="number" name="stars" id="stars" min="1" max="5" required>
+        </div>
+        <div>
+          <label for="image">Image</label>
+          <input type="text" name="image" id="image" required>
+        </div>
+        <div>
+          <label for="lat">Latitude</label>
+          <input type="text" name="latitude" id="lat" required>
+        </div>
+        <div>
+          <label for="lng">Longitude</label>
+          <input type="text" name="longitude" id="lng" required>
+        </div>
+
+        <button type="submit" class="button">Add My Dive</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="col-6">
+  <form class="newDive" method="POST" action="/dives">
+    <div>
+            <div class="wrap">
+                <p class="form-title">Sign Up</p>
+
+                <form  method="POST" action="/register">
+                <input type="text" placeholder="Location" name="location" id="location" required>
+                <input type="text" placeholder="Difficulty"  name="difficulty"  id="difficulty">
+                <input type="text" placeholder="Visibility" name="visibility" id="visibility" required>
+                <input type="text" placeholder="diveMonth" name="diveMonth" id="diveMonth" required>
+                <input type="number" placeholder="Stars" name="stars" id="stars" required>
+                <input type="text" placeholder="image" name="image" id="image" required>
+                <input type="text" placeholder="Latitude" name="Latitude" id="lat" required >
+                <input type="text" placeholder="Longitude" name="longitude" id="lng" required >
+
+                <input type="submit" value="Add Dive" class="button" />
+</div>
+</div>
+
+
+                </form>
+
+            </div>

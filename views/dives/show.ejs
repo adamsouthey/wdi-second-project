@@ -1,11 +1,4 @@
 
-    <div class="jumbotron jumbotron-fluid" id="jumbo">
-    <div class="container">
-      <div class="row">
-        <div class="offset-md-1">
-        </div>
-        </div>
-        </div>
 
     <div class="showDive">
   <div class="row">
@@ -30,11 +23,11 @@
     </div>
 
       <% if(locals.isLoggedIn && dive.belongsTo(user)) { %>
-        <a href="/dives/<%= dive.id %>/edit">Edit</a>
+        <a id="editShow" href="/dives/<%= dive.id %>/edit">Edit Review</a>
 
         <form method="POST" action="/dives/<%= dive.id %>">
           <input type="hidden" name="_method" value="DELETE">
-          <button>Delete</button>
+          <button id="deleteShow">Delete Review</button>
         </form>
       <% } %>
 

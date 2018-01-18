@@ -10,6 +10,31 @@ position: fixed;
 
 }
 
+.fixbar {
+    width: 100%;
+    height:30px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right:0;
+    height: 30px;
+    background: black;
+    z-index: 1;
+}
+#search {
+    position: absolute;
+    right:150px;
+    top: 0px;
+    width: 30px;
+    height: 22px;
+    z-index: 2;
+    background:red
+}
+
+.commentsForm{
+  width: 30%;
+}
+
 img{
   height: 300px;
   width: 300px;
@@ -27,6 +52,8 @@ img{
  display: block;
    margin-left: auto;
    margin-right: auto;
+   margin-left: 600px;
+
 
 }
 
@@ -41,9 +68,8 @@ img{
   text-align: center;
   display: block;
   position: fixed;
-
-
 }
+
 
 #jumbo{
   background-color: black;
@@ -64,7 +90,7 @@ img{
 }
 
 .thumbnail {
-  height: 150px;
+  height: 180px;
   width: 220px;
   max-width: 100%;
   text-align: center;
@@ -92,7 +118,7 @@ img{
   }
 
   .newDive{
-    text-align: center;
+    margin-left: -600px;
   }
   .showDive{
     color: blue;
@@ -112,15 +138,18 @@ img{
     margin-top: -160px;
     position:fixed;
     text-align: center;
+
   }
   .commentsForm{
     font-size:20px;
-    margin-left: 326px;
-    margin-top: 70px;
+    margin-left: 316px;
+    margin-top: -320px;
     line-height: 10px;
     & button{
       font-size: 12px;
-      float: right;
+      margin-left: -150px;
+
+
     }
 }
 .btn{
@@ -130,22 +159,37 @@ img{
 }
 
 #buttonShow.btn{
-  margin-left: 108px;
-  margin-top: 170px;
+  margin-left: 90px;
+  margin-top: -390px;
   background: #1E90FF;
   text-shadow: 10px;
       transform: rotateX(35deg);
+}
+  #editShow{
+
+    margin-left:-900px;
+    margin-right:424px;
+    margin-top: 550px;
+    font-size: 20px;
+    color: black;
 
 }
 #content{
   width: 250px;
   height: 100px;
   font-size: 12px;
-  margin-top: 70px;
-  margin-left:35px;
+  margin-top: -310px;
+  margin-left:15px;
   position:fixed;
   box-shadow:inset 0 0 5px 5px #888;
  background: #fff;
+}
+
+#deleteShow{
+
+  margin-top: 580px;
+  margin-left: -910px
+
 }
 
 
@@ -182,29 +226,34 @@ body {
 p.form-title
 {
     font-family: 'Open Sans' , sans-serif;
-    font-size:20px;
+    font-size:30px;
     font-weight: 600;
     text-align: right;
     margin-right: 140px;
-    color: #FFFFFF;
+    color: #black;
     margin-top: 5%;
     text-transform: uppercase;
     letter-spacing: 4px;
+    margin-left: 490px;
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 form
 {
-    width: 250px;
-    margin: 0 auto;
+    width: 350px;
+    margin-left: 400px;
 
 
 }
 
-form.login input[type="text"], form.login input[type="password"]
+form.login input[type="text"], form.login input[type="password"], form.login input[type="email"]
 {
     width: 100%;
     margin: 0;
-    padding: 5px 10px;
+    padding: 5px 5px;
     background: 0;
     border: 0;
     border-bottom: 1px solid #FFFFFF;
@@ -212,11 +261,13 @@ form.login input[type="text"], form.login input[type="password"]
     font-style: italic;
     font-size: 14px;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     margin-bottom: 5px;
     color: #FFFFFF;
     outline: 0;
-    color: white;
+    color: black;
+    line-height: 30px;
+
 }
 
 form.login input[type="submit"]
@@ -301,23 +352,7 @@ form.login a:hover
     margin-bottom: 15px;
 }
 
-.pass-reset input[type="email"]
-{
-    width: 100%;
-    margin: 5px 0 0 0;
-    padding: 5px 10px;
-    background: 0;
-    border: 0;
-    border-bottom: 1px solid #000000;
-    outline: 0;
-    font-style: italic;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-    color: #000000;
-    outline: 0;
-}
+
 
 .pass-reset input[type="submit"]
 {
@@ -350,3 +385,30 @@ form.login a:hover
 .img-circle avatar{
   width: 100px;
 }
+
+#navbar ul {
+ margin: 0;
+ padding: 5px;
+ list-style-type: none;
+ text-align: left;
+ background-color: #000;
+ font-size: 22px;
+ font-family: Copperplate,Copperplate Gothic Light,fantasy;
+
+ }
+
+#navbar ul li {
+ display: inline;
+ }
+
+#navbar ul li a {
+ text-decoration: none;
+ padding: .2em 1em;
+ color: #fff;
+ background-color: #000;
+ }
+
+#navbar ul li a:hover {
+ color: #000;
+ background-color: #fff;
+ }
