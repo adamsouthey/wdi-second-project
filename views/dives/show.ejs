@@ -1,11 +1,11 @@
 <div class="container showDive">
   <div class="row">
 
-    <div class="col-md-4 col-sm-12">
-      <div id="map"></div>
-    </div>
+
 
     <div class="col-md-4 col-sm-12">
+      <div class="user-container">
+
       <img src="<%= dive.image %>" alt="<%= dive.location %>">
       <h6> Username: <%= dive.createdBy.username %></h6>
       <h6>Location:<%= dive.location %></h6>
@@ -15,6 +15,7 @@
       <input type="hidden" name="latitude" value="<%= dive.latitude %>" />
       <input type="hidden" name="longitude" value="<%= dive.longitude %>" />
       <% while(dive.stars--) { %> &star; <% } %>
+      <hr>
 
       <% if(locals.isLoggedIn && dive.belongsTo(user)) { %>
         <a id="editShow" href="/dives/<%= dive.id %>/edit">Edit Review</a>
@@ -24,21 +25,28 @@
         </form>
       <% } %>
     </div>
+    </div>
+
+    <div class="col-md-4 col-sm-12">
+      <div class="customMap" id="map"></div>
+    </div>
 
     <div class="col-md-4 col-sm-12">
       <div class="comment-container">
         <% dive.comments.forEach((comment) => { %>
           <div>
+          <hr>
             <p><%= comment.content %></p>
-            <small><%= comment.createdBy.username %></small>
+              <small><%= comment.createdBy.username %></small>
             <% if(locals.isLoggedIn && comment.belongsTo(user)) { %>
               <form method="POST" action="/dives/<%= dive.id %>/comments/<%= comment.id %>">
                 <input type="hidden" name="_method" value="DELETE">
-                <button>Delete</button>
+                <button>Delete Comment</button>
               </form>
             <% } %>
           </div>
         <% }) %>
+        <hr>
       </div>
       <div class="comment-form">
         <% if(locals.isLoggedIn) { %>

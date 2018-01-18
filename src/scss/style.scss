@@ -1,16 +1,15 @@
 #map {
   height: 100%;
   width: 100%;
+  margin-top: 20px;
 }
 
-// #mapShow{
-//   margin-left: 190px;
-// }
 
 #buttonShow.btn{
   margin-left: 880px;
   margin-top: -320px;
 }
+
 .userProfile{
   text-align: center;
   margin-top: 100px;
@@ -53,7 +52,14 @@ img{
   height: 250px;
   width: 300px;
   border-radius:20%;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 
+}
+
+.showDive{
+  margin-top: 80px;
 }
 
 .showLeft{
@@ -177,7 +183,7 @@ body {
   background-position: cover;
 
   &.homepage {
-    background: url('https://i.imgur.com/HVrOCsH.jpg') fixed;
+    background: url('https://i.imgur.com/x6WnfYl.jpg') fixed;
     background-size: cover;
     background-position: 8px 8px;
     padding: 0;
@@ -209,7 +215,7 @@ p.form-title
     color: black;
     text-transform: uppercase;
     letter-spacing: 4px;
-    margin-left: 470px;
+    margin-left: 2px;
     clear: both;
     display: inline-block;
     overflow: hidden;
@@ -222,17 +228,10 @@ p.form-title
   font-size: 30px;
 }
 
-// form
-// {
-//     width: 350px;
-//     margin-left: 400px;
-//     margin-top: 50px;
-// }
 
 form.login input[type="text"], form.login input[type="password"], form.login input[type="email"], form.login input[type="number"]
 {
     width: 100%;
-    margin: 0;
     padding: 5px 5px;
     background: 0;
     border: 0;
@@ -242,13 +241,16 @@ form.login input[type="text"], form.login input[type="password"], form.login inp
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 2px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+
     color: #FFFFFF;
     outline: 0;
     color: black;
-    line-height: 30px;
-
+    line-height: 50px;
 }
+
+
 
 form.login input[type="submit"]
 {
@@ -296,6 +298,13 @@ form.login a:hover
 {
     color: #2ecc71;
 }
+
+form.login{
+  width: 500px;
+
+}
+
+
 
 .pr-wrap
 {
@@ -393,7 +402,10 @@ form.login a:hover
  background-color: #fff;
  }
 
-
+#editShow #deleteShow{
+  color: #7FDBFF;
+  text-decoration: none;
+}
 
  .searchBar{
    float: right;
@@ -405,22 +417,43 @@ form.login a:hover
 
  .fa-globe{
    font-size: 30px;
-   margin-left:  170px;
+   margin-left:  150px;
  }
 
- // .col-md-4 {
- //   text-align: center;
- // }
+.user-container{
+   font-family: Copperplate,Copperplate Gothic Light,fantasy;
+   text-align: center;
+}
 
-// .blue {
-//   background: blue;
-//   height: 300px;
-// }
-// .red {
-//   background: red;
-//   height: 300px;
-// }
-// .yellow {
-//   background: yellow;
-//   height: 300px;
-// }
+
+
+
+.comment-container{
+   font-family: Copperplate,Copperplate Gothic Light,fantasy;
+  font-size: 14px;
+  line-height: 20px;
+& p{
+  font-size: 18px;
+   font-family: Copperplate,Copperplate Gothic Light,fantasy;
+   color: #39CCCC;
+   & small{
+  float: left;
+   }
+}
+}
+
+.comment-form{
+   font-family: Copperplate,Copperplate Gothic Light,fantasy;
+  font-size: 20px;
+  line-height: 20px;
+  margin-top: 10px;
+  width: 400px;
+  & textarea{
+    width: 400px;
+    & button.btn{
+      text-align: center;
+    }
+  }
+
+
+}
