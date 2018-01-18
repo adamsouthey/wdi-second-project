@@ -1,50 +1,37 @@
+
+
+
 <div class="container">
   <div class="row">
-    <div class="col-8">
+
+    <div class="col-md-6">
       <div id="map"></div>
+        </div>
+
+          <div class="col-md-6">
+            <div class="editDive">
+              <p class="form-title" id="addDiveTitle">Edit your Dive Recommendation</p>
+                <form class="login" method="POST" action="/dives/<%= dive.id %>">
+                    <input type="hidden" name="_method" value="PUT">
+
+          <input type="text" placeholder="Location" name="location" id="location" value="<%= dive.location %>" required>
+          <input type="text" placeholder="Difficulty" name="difficulty" id="difficulty" value="<%= dive.difficulty %>" required>
+          <input type="text" placeholder="Visibility" name="visibility" id="visibility" value="<%= dive.visibility %>" required>
+          <input type="text" placeholder="Dive Date" name="diveMonth" id="diveMonth" value="<%= dive.diveMonth %>" required>
+          <input type="number" placeholder="Rating" name="stars" id="stars" min="1" max="5" value="<%= dive.stars %>" required>
+          <input type="text" placeholder="Insert Image URL" name="image" id="image" value="<%= dive.image %>" required>
+          <input type="text" placeholder="Click Map to autocomplete field" name="latitude" id="lat" value="<%= dive.latitude %>" required>
+          <input type="text" placeholder="Click Map to autocomplete field" name="longitude" id="lng" value="<%= dive.longitude %>" required>
+
+                <button type="submit" class="btn btn-primary">Submit Review</button>
+              </form>
+
+
+      </div>
+
     </div>
-    <div class="col-4">
-      <form class="editDive" method="POST" action="/dives/<%= dive.id %>">
-        <input type="hidden" name="_method" value="PUT">
-
-        <div>
-          <label for="location">Dive Location</label>
-          <input type="text" name="location" id="location" value="<%= dive.location %>" required>
-        </div>
 
 
-        <div>
-          <label for="difficulty">Dive Difficulty</label>
-          <input type="text" name="difficulty" id="difficulty" value="<%= dive.difficulty %>" required>
-        </div>
-        <div>
-          <label for="visibility"> Visibility </label>
-          <input type="text" name="visibility" id="visibility" value="<%= dive.visibility %>" required>
-        </div>
-        <div>
-          <label for="diveMonth">Dive Month</label>
-          <input type="text" name="diveMonth" id="diveMonth" value="<%= dive.diveMonth %>" required>
-        </div>
-
-        <div>
-          <label for="stars">Stars</label>
-          <input type="number" name="stars" id="stars" min="1" max="5" value="<%= dive.stars %>" required>
-        </div>
-        <div>
-          <label for="image">Image</label>
-          <input type="text" name="image" id="image" value="<%= dive.image %>" required>
-        </div>
-        <div>
-          <label for="latitude">Latitude</label>
-          <input type="text" name="latitude" id="latitude" value="<%= dive.latitude %>" required>
-        </div>
-        <div>
-          <label for="longitude">Longitude</label>
-          <input type="text" name="longitude" id="longitude" value="<%= dive.longitude %>" required>
-        </div>
-
-        <button class="button">Edit My Dive</button>
-      </form>
-    </div>
   </div>
+
 </div>
