@@ -1,5 +1,7 @@
-
-
+<div class="indexHeader">
+  <h1 class="indexHeaderTitle">Logged Dives Home</h1>
+  <hr>
+</div>
 <div class = "imagesIndex">
 <div class="background">
 <div class="row">
@@ -9,6 +11,7 @@
   <img class="thumbnail" src="<%= dive.image %>" alt="<%= dive.location %>">
   <h2> <%= dive.location %></h2>
   <p><% while(dive.stars--) { %> &star; <% } %></p>
+  <i class="fa fa-globe" aria-hidden="true"></i>
   </a>
   </div>
   <% }) %>

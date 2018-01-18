@@ -6,15 +6,7 @@
     </div>
     </div>
 
-    <div class="fixbar">
-    <div id="search">
 
-      <input name="location" type="search" placeholder="Search By Location" aria-label="Search">
-    <input name="stars" type="search" placeholder="Search By Rating" aria-label="Search">
-<button type="submit" class="button">Search</button>
-
-    </div>
-</div>
     <div id="navbar">
   <ul>
 	<li><a id="docuDiveHome" href="/">DocuDive Home</a></li>
@@ -26,5 +18,10 @@
 	<li><a href="/dives/new">Share your Dive Experience</a></li>
 	<li><a href="/logout">Logout</a></li>
     <% } %>
+    <form class="searchBar" action="/search" method="GET">
+    <li><input name="location" type="search" placeholder="Search By Location" aria-label="Search"></li>
+          <li><input name="stars" type="search" placeholder="Search By Rating" aria-label="Search">  </li>
+    <button type="submit">Search</button>
+    </form>
   </ul>
 </div>

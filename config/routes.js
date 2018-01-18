@@ -30,7 +30,7 @@ router.route('/search')
 //show
 
 //34-35 Must go above /movies/:id (see line 37-40) as if a request is made to /movies/:id
-router.route('/dives/new')
+router.route('/dives/new', { isEditMap: true})
   .get(secureRoute, dives.new);
 
 router.route('/dives/:id')

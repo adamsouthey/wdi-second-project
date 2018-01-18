@@ -10,6 +10,7 @@
   <script src="/js/app.js" charset="utf-8"></script>
 </head>
 <body <% if(locals.isHomepage) { %>class="homepage"<% } %>>
+<body <% if(locals.isEditMap) { %>class="isEditMap"<% } %>>
   <header>
     <% include ./partials/_navbar %>
 

@@ -28,6 +28,7 @@ $(() => {
     //   lng = parseFloat($('#lng').text());
     // }
 
+    console.log('running');
 
     initMap();
   }
@@ -35,13 +36,9 @@ $(() => {
   function initMap() {
     map = new google.maps.Map($map.get(0), options);
 
-
-
-
     if (!$('.showDive').length) {
       google.maps.event.addListener(map, 'click', handleMapClick);
     }
-
 
     if ($('.editDive').length !== 0 || $('.showDive').length !== 0) {
       // if map is rendering on the edit page, place marker on map with current lat and lng values

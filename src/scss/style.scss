@@ -1,13 +1,14 @@
 #map {
-  height:500px;
-  width:500px;
-  border-radius: 5%;
-  opacity: 0.8;
-position: fixed;
-  margin-top: 100px;
-  margin-left: 850px;
+  height:450px;
+  width:450px;
+margin-left: -155px;
+margin-top: 100px;
+box-shadow: 0 0 10px 2px #282a2d;
 
+}
 
+.newDive{
+  margin-top: 30px;
 }
 
 .fixbar {
@@ -23,12 +24,11 @@ position: fixed;
 }
 #search {
     position: absolute;
-    right:150px;
+    margin-right: 100px;
     top: 0px;
     width: 30px;
     height: 22px;
-    z-index: 2;
-    background:red
+    z-index: 1;
 }
 
 .commentsForm{
@@ -91,7 +91,7 @@ img{
 
 .thumbnail {
   height: 180px;
-  width: 220px;
+  width: 240px;
   max-width: 100%;
   text-align: center;
   display: block;
@@ -103,11 +103,15 @@ img{
   transition: opacity 1s ease-in-out;
   border-radius:20%;
   overflow:hidden;
+  margin-bottom: 4px;
+  line-height: 10px;
+  margin-top: 20px;
+   box-shadow: 0 0 10px 2px #282a2d;
   }
 
 
 .thumbnail:hover {
-  opacity:0.7;
+  opacity:0.5;
 }
 
   h2, p, h4, h6{
@@ -117,9 +121,6 @@ img{
 
   }
 
-  .newDive{
-    margin-left: -600px;
-  }
   .showDive{
     color: blue;
     line-height: 20px;
@@ -168,9 +169,9 @@ img{
   #editShow{
 
     margin-left:-900px;
-    margin-right:424px;
+    margin-right:444px;
     margin-top: 550px;
-    font-size: 20px;
+    font-size: 10px;
     color: black;
 
 }
@@ -192,7 +193,16 @@ img{
 
 }
 
+.indexHeader{
+text-align: center;
+}
 
+.indexHeaderTitle{
+  font-size: 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+   font-family: Copperplate,Copperplate Gothic Light,fantasy;
+}
 
 body {
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHQhEop9bfbCB1tqMcxmk8hPYdV8jgElLSVq8xm1uL-jR0kVnU');
@@ -202,7 +212,7 @@ body {
   background-position: cover;
 
   &.homepage {
-    background: url('http://www.wondermondo.com/Images/NAmerica/Bermuda/Bermuda/BermudaCave.jpg') fixed;
+    background: url('https://i.imgur.com/HVrOCsH.jpg') fixed;
     background-size: cover;
     background-position: 8px 8px;
     padding: 0;
@@ -225,31 +235,37 @@ body {
 
 p.form-title
 {
-    font-family: 'Open Sans' , sans-serif;
-    font-size:30px;
-    font-weight: 600;
-    text-align: right;
-    margin-right: 140px;
-    color: #black;
-    margin-top: 5%;
+    font-family: Copperplate,Copperplate Gothic Light,fantasy;
+    font-size:40px;
+    font-weight: 900;
+    margin-left: -100px;
+    margin-right:-200px;
+    margin-bottom: -50px;
+    color: black;
     text-transform: uppercase;
     letter-spacing: 4px;
-    margin-left: 490px;
+    margin-left: 470px;
     clear: both;
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
 }
 
+#addDiveTitle{
+  margin-left: -160px;
+  margin-bottom: 10px;
+}
+
 form
 {
     width: 350px;
     margin-left: 400px;
+    margin-top: 50px;
 
 
 }
 
-form.login input[type="text"], form.login input[type="password"], form.login input[type="email"]
+form.login input[type="text"], form.login input[type="password"], form.login input[type="email"], form.login input[type="number"]
 {
     width: 100%;
     margin: 0;
@@ -338,7 +354,7 @@ form.login a:hover
 {
     margin: 0 auto;
     width: 250px;
-    position: relative;
+    // position: relative;
     margin-top: 22%;
     z-index: 999;
     background: #FFFFFF;
@@ -411,4 +427,20 @@ form.login a:hover
 #navbar ul li a:hover {
  color: #000;
  background-color: #fff;
+ }
+
+
+
+ .searchBar{
+   float: right;
+   line-height: 22px;
+   margin-top: 5px;
+   margin-right: -30px;
+   font-size: 10px;
+
+ }
+
+ .fa-globe{
+   font-size: 30px;
+   margin-left:  150px;
  }

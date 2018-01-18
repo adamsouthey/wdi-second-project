@@ -1,47 +1,37 @@
+
+
+
+
 <div class="container">
   <div class="row">
-    <div class="col-6">
+
+    <div class="col-md-6">
       <div id="map"></div>
+        </div>
+
+          <div class="col-md-6">
+            <div class="newDive">
+              <p class="form-title" id="addDiveTitle">Add Your Dive Recommendation</p>
+                <form class="login" method="POST" action="/dives">
+
+          <input type="text" placeholder="Location" name="location" id="location" required>
+          <input type="text" placeholder="Difficulty" name="difficulty" id="difficulty" required>
+          <input type="text" placeholder="Visibility" name="visibility" id="visibility" required>
+          <input type="text" placeholder="Dive Date" name="diveMonth" id="diveMonth" required>
+          <input type="number" placeholder="Rating" name="stars" id="stars" min="1" max="5" required>
+          <input type="text" placeholder="Insert Image URL" name="image" id="image" required>
+          <input type="text" placeholder="Click Map to autocomplete field" name="latitude" id="lat" required>
+          <input type="text" placeholder="Click Map to autocomplete field" name="longitude" id="lng" required>
+
+                <button type="submit" class="btn btn-primary">Submit Review</button>
+              </form>
+
+
+      </div>
+
     </div>
-    <div class="col-6">
-      <form class="newDive" method="POST" action="/dives">
-        <div>
-          <label for="location">Dive Location</label>
-          <input type="text" name="location" id="location" required>
-        </div>
 
-        <div>
-          <label for="difficulty">Dive Difficulty</label>
-          <input type="text" name="difficulty" id="difficulty" required>
-        </div>
-        <div>
-          <label for="visibility"> Visibility </label>
-          <input type="text" name="visibility" id="visibility" required>
-        </div>
-        <div>
-          <label for="diveMonth">Dive Month</label>
-          <input type="text" name="diveMonth" id="diveMonth" required>
-        </div>
 
-        <div>
-          <label for="stars">Stars</label>
-          <input type="number" name="stars" id="stars" min="1" max="5" required>
-        </div>
-        <div>
-          <label for="image">Image</label>
-          <input type="text" name="image" id="image" required>
-        </div>
-        <div>
-          <label for="lat">Latitude</label>
-          <input type="text" name="latitude" id="lat" required>
-        </div>
-        <div>
-          <label for="lng">Longitude</label>
-          <input type="text" name="longitude" id="lng" required>
-        </div>
-
-        <button type="submit" class="button">Add My Dive</button>
-      </form>
-    </div>
   </div>
+
 </div>
