@@ -1,4 +1,5 @@
-# wdi-second-projectProject Overview
+# wdi-second-project
+Project Overview
 ==================================
 
 For my  second project at WDI General Assembly I have created a website to be used by dive enthusiasts where they can share their recent dive experiences, the location of their dive and provide a small review.   Please see direct link to Heroku below.
