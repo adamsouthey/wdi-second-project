@@ -27,6 +27,9 @@ For this project I have used the following technologies:
 11. mongoose: V5.0.0-rc2
 12. morgan: V1.8.1
 13. node-geocoder: V3.21.1
+14. HTML
+15. CSS
+16. Javascript (ECMAScript 6)
 
 APIs Used
 -----------
