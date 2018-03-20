@@ -19,7 +19,7 @@ For this project I have used the following technologies:
 - HTML5
 - SCSS
 - JavaScript (ECMAScript 6)
-- - Node JS
+- Node JS
 - Bootstrap
 - Gulp
 - bcrypt: V1.0.3
