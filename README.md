@@ -48,6 +48,7 @@ For this project I have used the following APIs:
 
 Wireframes
 ----------------
+<img width="683" alt="screenshot 2018-03-20 15 28 23" src="https://user-images.githubusercontent.com/32818032/37664566-7a6e3050-2c53-11e8-9454-1fb63d15fdd6.png">
 
 Trello
 ----------------
