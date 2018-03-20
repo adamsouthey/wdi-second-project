@@ -94,9 +94,7 @@ Show Page
 ### Challenges and Problems
 
 - It was challenging at first to figure out the step-by-step process of building the app and inputting this into my Trello  board.
-
 - Connecting to the Google Maps API
-
 - Implementing the search bar to perform dual searches of location and rating simultaneously
 
 ---
@@ -104,9 +102,7 @@ Show Page
 ### Wins
 
 - At the beginning of each day I would plan out my goals and try to hit my targets for the day. This way, I was able to keep to a strict schedule.
-
 - I am proud of all the functionality I have produced in the project as well as the styling.
-
 - Connecting my app to the Google Maps API 
 
 ---
