@@ -52,6 +52,11 @@ Wireframes
 
 Trello
 ----------------
+I used Trello throughout my project in order to keep track of what I needed to do and what I had already completed. This allowed me to prioritise and to make sure I got the project done in time. The screenshots below were taken during the project:
+
+<img width="1040" alt="screenshot 2018-03-20 15 37 28" src="https://user-images.githubusercontent.com/32818032/37665179-a1a67262-2c54-11e8-8da3-f050fdcbd609.png">
+
+
 
 Screenshots
 ----------------
@@ -84,26 +89,37 @@ Show Page
 
 ![screenshot 2018-01-19 11 31 28](https://user-images.githubusercontent.com/32818032/35149149-eec2a7c2-fd0c-11e7-994b-fffbcf0e455c.png)
 
+---
+
+### Challenges and Problems
+
+- It was challenging at first to figure out the step-by-step process of building the app and inputting this into my Trello  board.
+
+- Connecting to the Google Maps API
+
+- Implementing the search bar to perform dual searches of location and rating simultaneously
+
+---
+
+### Wins
+
+- At the beginning of each day I would plan out my goals and try to hit my targets for the day. This way, I was able to keep to a strict schedule.
+
+- I am proud of all the functionality I have produced in the project as well as the styling.
+
+- Connecting my app to the Google Maps API 
+
+---
+
+### Future Features
+
+- Displaying all user dive coordinates on a single map
+- Giving admin permissions to email addresses
+- Add more filter capability to search function
+- Link coordinates to a weather API to display current weather
+- Link to a surfing API to show popular surfing spots
 
 
-Challenges and Problems
----------
-
-1. Connecting to the Google Maps API
-2. Implementing the search bar to perform dual searches of location and rating simultaneously
 
 
-
-Wins
----------
-
-
-Features to Add
-----------------
-
-1. Displaying all user dive coordinates on a single map
-2. Giving admin permissions to email addresses
-3. Add more filter capability to search function
-4. Link coordinates to a weather API to display current weather
-5. Link to a surfing API to show popular surfing spots
 
