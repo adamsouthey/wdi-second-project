@@ -1,56 +1,56 @@
-# wdi-second-project
-Project Overview
+![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
+
+# Project 2: Uneaten Matters
+
+### Overview
 ==================================
 
 For my  second project at WDI General Assembly I have created a website to be used by dive enthusiasts where they can share their recent dive experiences, the location of their dive and provide a small review.   Please see direct link to Heroku below.
 
 [**Heroku**](https://peaceful-everglades-97488.herokuapp.com/ "Title")
 
+[**GitHub Repository**](https://github.com/adamsouthey/wdi-second-project)  
+
 Technologies Used
 -----------
 
 For this project I have used the following technologies:
 
-1. Node JS
-2. Google Maps API
-2. Bootstrap
-3. Gulp
-2. bcrypt: V1.0.3
-3. bluebird: V3.4.7
-4. body-parser: V1.18.2
-5. ejs: V2.5.6
-6. express: V4.14.1
-7. express-ejs-layouts: 2.2.0
-8. express-flash: V0.0.2
-9. express-session: V1.15.6
-10. method-override: V2.3.10
-11. mongoose: V5.0.0-rc2
-12. morgan: V1.8.1
-13. node-geocoder: V3.21.1
-14. HTML
-15. CSS
-16. Javascript (ECMAScript 6)
+- HTML5
+- SCSS
+- JavaScript (ECMAScript 6)
+- - Node JS
+- Bootstrap
+- Gulp
+- bcrypt: V1.0.3
+- bluebird: V3.4.7
+- body-parser: V1.18.2
+- ejs: V2.5.6
+- express: V4.14.1
+- express-ejs-layouts: 2.2.0
+- express-flash: V0.0.2
+- express-session: V1.15.6
+- method-override: V2.3.10
+- mongoose: V5.0.0-rc2
+- morgan: V1.8.1
+- Git
+- GitHub
+- Heroku
+- Trello
+- Balsamiq
 
 APIs Used
 -----------
 
 For this project I have used the following APIs:
 
-1. [**Google Maps Javascript API Link**](https://peaceful-everglades-97488.herokuapp.com/ "Title")
+1. [**Google Maps API**](https://developers.google.com/maps/)
 
-
-
-Running the Code
+Wireframes
 ----------------
 
-Follow these steps to run the code:
-
-1. `cd` into the _wdi-second-project_ directory.
-2. Open in Atom
-1. Run _Mongod_
-2. Run _node db/seeds_
-3. Run _Gulp_
-4. Reload localhost:8000 on browser
+Trello
+----------------
 
 Screenshots
 ----------------
@@ -85,11 +85,16 @@ Show Page
 
 
 
-Problems?
+Challenges and Problems
 ---------
 
 1. Connecting to the Google Maps API
 2. Implementing the search bar to perform dual searches of location and rating simultaneously
+
+
+
+Wins
+---------
 
 
 Features to Add
