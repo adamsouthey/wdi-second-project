@@ -7,6 +7,21 @@
 
 For my  second project at WDI General Assembly I have created a website to be used by dive enthusiasts where they can share their recent dive experiences, the location of their dive and provide a small review.   Please see direct link to Heroku below.
 
+### Project Brief
+==================================
+
+Your app must:
+
+- Have at least 2 models – one representing a user and one that represents the main resource of your app, e.g. Restaurants
+- Incude relationships - embedded or referenced. Make sure you take the time to consider the best approach before building out your models.
+- The app should include authentication - with hashed passwords & an authorization flow.
+- Have complete RESTful routes for at least one of your resources with all CRUD actions.
+- You must use SCSS - as this is a key industry skill.
+- You should use a CSS framework that has a grid system - even if the grid is the only part you use from the framework, it is fundamental that you get to grips with rows and columns.
+- Include wireframes - that you designed before building the app.
+- Have semantically clean HTML - you make sure you write HTML that makes structural sense rather than thinking about how it might look, which is the job of CSS.
+- Be deployed online and accessible to the public.
+
 [**Heroku**](https://peaceful-everglades-97488.herokuapp.com/ "Title")
 
 [**GitHub Repository**](https://github.com/adamsouthey/wdi-second-project)  
