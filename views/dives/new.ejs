@@ -1,14 +1,11 @@
 <div class="container">
   <div class="row">
 
-    <div class="col-md-6">
-      <div id="map"></div>
-        </div>
 
-          <div class="col-md-6">
-            <div class="newDive">
-              <p class="form-title" id="addDiveTitle">Add Your Dive Recommendation</p>
-                <form class="login" method="POST" action="/dives">
+    <div class="col-md-12">
+      <div class="newDive">
+        <p class="form-title" id="addDiveTitle">Add Your Dive Recommendation</p>
+        <form class="login" method="POST" action="/dives">
 
           <input type="text" placeholder="Location" name="location" id="location" required>
           <input type="text" placeholder="Difficulty" name="difficulty" id="difficulty" required>
@@ -18,14 +15,20 @@
           <input type="text" placeholder="Insert Image URL" name="image" id="image" required>
           <input type="text" placeholder="Click Map to autocomplete field" name="latitude" id="lat" required>
           <input type="text" placeholder="Click Map to autocomplete field" name="longitude" id="lng" required>
-
-                <button type="submit" class="btn btn-primary">Submit Review</button>
-              </form>
-
-
+          <br>
+          <button type="submit" class="btn btn-primary">Submit Review</button>
+        </form>
+        <br>
+        <br>
       </div>
-
     </div>
+
+
+
+    <div class="col-md-12">
+      <div id="map"></div>
+    </div>
+
 
 
   </div>
