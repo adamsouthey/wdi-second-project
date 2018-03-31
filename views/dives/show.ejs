@@ -16,7 +16,8 @@
       <input type="hidden" name="latitude" value="<%= dive.latitude %>" />
       <input type="hidden" name="longitude" value="<%= dive.longitude %>" />
       <% while(dive.stars--) { %> &star; <% } %>
-      <hr>
+      <br>
+      <br>
 
       <% if(locals.isLoggedIn && dive.belongsTo(user)) { %>
         <a id="editShow" href="/dives/<%= dive.id %>/edit">Edit Review</a>
@@ -43,9 +44,9 @@
                 <button>Delete Comment</button>
               </form>
             <% } %>
+            <hr>
           </div>
         <% }) %>
-
       </div>
       <div class="comment-form">
         <% if(locals.isLoggedIn) { %>
@@ -54,6 +55,7 @@
               <button class="btn">Comment</button>
             </form>
         <% } %>
+        <br>
       </div>
     </div>
 
