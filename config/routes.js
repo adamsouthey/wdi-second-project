@@ -16,20 +16,6 @@ router.route('/dives')
 router.route('/search')
   .get(dives.search);
 
-
-
-//Group restful resources(models together in the routes file)
-//i.e
-//MOVIES
-//index
-//show
-
-//THEN
-//User
-//index
-//show
-
-//34-35 Must go above /movies/:id (see line 37-40) as if a request is made to /movies/:id
 router.route('/dives/new', { isEditMap: true})
   .get(secureRoute, dives.new);
 
@@ -54,8 +40,6 @@ router.route('/register')
   .get(registrations.new)
   .post(registrations.create);
 
-//Sessions.new = getting form for user to input login deatils
-//Sessions.create = the act of creating the new session for the user
 router.route('/login')
   .get(sessions.new)
   .post(sessions.create);

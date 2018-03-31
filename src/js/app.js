@@ -11,14 +11,14 @@ $(() => {
     center: coOrd,
     styles: [
       {
-        "featureType": "administrative.country",
-        "elementType": "geometry",
-        "stylers": [
+        'featureType': 'administrative.country',
+        'elementType': 'geometry',
+        'stylers': [
           {
-            "visibility": "simplified"
+            'visibility': 'simplified'
           },
           {
-            "hue": '#ff0000'
+            'hue': '#ff0000'
           }
         ]
       }

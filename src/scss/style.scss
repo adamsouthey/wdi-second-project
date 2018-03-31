@@ -158,7 +158,7 @@ img{
   font-size: 12px;
   margin-top: -280px;
   margin-left:800px;
-  // position:fixed;
+
   box-shadow:inset 0 0 5px 5px #888;
  background: #fff;
 }
@@ -169,7 +169,7 @@ text-align: center;
 }
 
 .indexHeaderTitle{
-  font-size: 60px;
+  font-size: 3vw;
   margin-top: 30px;
   margin-bottom: 30px;
    font-family: Copperplate,Copperplate Gothic Light,fantasy;
@@ -184,8 +184,11 @@ body {
 
   &.homepage {
     background: url('https://i.imgur.com/x6WnfYl.jpg') fixed;
-    background-size: cover;
-    background-position: 8px 8px;
+     background-repeat: no-repeat;
+    background-size: 100% auto;
+  background-position: center;
+  height: 100%;
+  width: 100%;
     padding: 0;
     margin: 0;
   }
@@ -381,7 +384,7 @@ form.login{
  list-style-type: none;
  text-align: left;
  background-color: #000;
- font-size: 22px;
+
  font-family: Copperplate,Copperplate Gothic Light,fantasy;
 
  }
@@ -394,6 +397,7 @@ form.login{
  text-decoration: none;
  padding: 0 10px;
  color: #fff;
+ font-size: 1.5vw;
  background-color: #000;
  }
 
@@ -412,7 +416,7 @@ form.login{
    line-height: 22px;
    margin-top: 5px;
    margin-right: 10px;
-   font-size: 10px;
+   font-size: 1vw;
  }
 
  .fa-globe{
