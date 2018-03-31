@@ -3,10 +3,11 @@
 
 
 
-    <div class="col-md-4 col-sm-12">
+    <div class="col-md-6 col-sm-12">
       <div class="user-container">
 
       <img src="<%= dive.image %>" alt="<%= dive.location %>">
+    <hr>
       <h6> Username: <%= dive.createdBy.username %></h6>
       <h6>Location:<%= dive.location %></h6>
       <h6>Difficulty: <%= dive.difficulty %><br></h6>
@@ -27,15 +28,13 @@
     </div>
     </div>
 
-    <div class="col-md-4 col-sm-12">
-      <div id="map"></div>
-    </div>
 
-    <div class="col-md-4 col-sm-12">
+
+    <div class="col-md-6 col-sm-12">
       <div class="comment-container">
         <% dive.comments.forEach((comment) => { %>
           <div>
-          <hr>
+
             <p><%= comment.content %></p>
               <small><%= comment.createdBy.username %></small>
             <% if(locals.isLoggedIn && comment.belongsTo(user)) { %>
@@ -46,7 +45,7 @@
             <% } %>
           </div>
         <% }) %>
-        <hr>
+
       </div>
       <div class="comment-form">
         <% if(locals.isLoggedIn) { %>
@@ -56,6 +55,10 @@
             </form>
         <% } %>
       </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12">
+      <div id="map"></div>
     </div>
 
   </div>

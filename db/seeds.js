@@ -112,16 +112,6 @@ User
     latitude: '18.402',
     longitude: '174.033'
   }, {
-    location: 'Swallows Cave Ava',
-    createdBy: users[0],
-    difficulty: 'Hard',
-    visibility: 'Clear',
-    diveMonth: 'November',
-    image: 'https://cubatours.online/wp-content/uploads/2016/12/diving-1-1024x687.jpg',
-    stars: 3,
-    latitude: '18.408',
-    longitude: '174.028'
-  }, {
     location: 'Indonesia Komodo',
     createdBy: users[0],
     difficulty: 'Hard',
