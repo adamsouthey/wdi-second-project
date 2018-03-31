@@ -145,9 +145,9 @@ img{
   }
 
 .btn{
-  height: 30px;
-  margin-right: 100px;
-  margin-top: -4px;
+  vertical-align: middle;
+  font-size: 1.5vw;
+  text-align: center;
 }
 
 
@@ -209,7 +209,7 @@ body {
 p.form-title
 {
     font-family: Copperplate,Copperplate Gothic Light,fantasy;
-    font-size:40px;
+    font-size:2.5vw;
     font-weight: 900;
     margin-left: -100px;
     margin-right:-200px;
@@ -227,20 +227,21 @@ p.form-title
 #addDiveTitle{
   margin-left: -20px;
   margin-bottom: 10px;
-  font-size: 30px;
+  font-size: 2.5vw;
+  margin: 0 auto;
 }
 
 
 form.login input[type="text"], form.login input[type="password"], form.login input[type="email"], form.login input[type="number"]
 {
     width: 100%;
-    padding: 5px 5px;
+
     background: 0;
     border: 0;
     border-bottom: 1px solid #FFFFFF;
     outline: 0;
     font-style: italic;
-    font-size: 14px;
+    font-size: 1.2vw;
     font-weight: 600;
     letter-spacing: 2px;
     margin-bottom: 0px;
@@ -256,8 +257,8 @@ form.login input[type="text"], form.login input[type="password"], form.login inp
 
 form.login input[type="submit"]
 {
-    width: 100%;
-    font-size: 14px;
+    width: 30%;
+    font-size: 1.2vw;
     text-transform: uppercase;
     font-weight: 500;
     margin-top: 16px;
@@ -450,6 +451,7 @@ form.login{
     width: 200px;
     & button.btn{
       text-align: center;
+
     }
   }
 

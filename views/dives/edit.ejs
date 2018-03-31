@@ -4,11 +4,8 @@
 <div class="container">
   <div class="row">
 
-    <div class="col-md-6">
-      <div id="map"></div>
-        </div>
 
-          <div class="col-md-6">
+          <div class="col-md-12">
             <div class="editDive">
               <p class="form-title" id="addDiveTitle">Edit your Dive Recommendation</p>
                 <form class="login" method="POST" action="/dives/<%= dive.id %>">
@@ -24,12 +21,18 @@
           <input type="text" placeholder="Click Map to autocomplete field" name="longitude" id="lng" value="<%= dive.longitude %>" required>
 
                 <button type="submit" class="btn btn-primary">Submit Review</button>
+                <br>
+                <br>
               </form>
-
-
       </div>
-
     </div>
+
+
+
+    <div class="col-md-12">
+      <div id="map"></div>
+        </div>
+
 
 
   </div>

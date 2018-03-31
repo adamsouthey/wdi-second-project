@@ -13,8 +13,9 @@
           <input type="text" placeholder="Dive Date" name="diveMonth" id="diveMonth" required>
           <input type="number" placeholder="Rating" name="stars" id="stars" min="1" max="5" required>
           <input type="text" placeholder="Insert Image URL" name="image" id="image" required>
-          <input type="text" placeholder="Click Map to autocomplete field" name="latitude" id="lat" required>
-          <input type="text" placeholder="Click Map to autocomplete field" name="longitude" id="lng" required>
+          <input type="text" placeholder="Click Location on Map to autocomplete" name="latitude" id="lat" required>
+          <input type="text" placeholder="Click Location on Map to autocomplete" name="longitude" id="lng" required>
+          <br>
           <br>
           <button type="submit" class="btn btn-primary">Submit Review</button>
         </form>
@@ -26,6 +27,7 @@
 
 
     <div class="col-md-12">
+      <h2>Map</h2>
       <div id="map"></div>
     </div>
 
