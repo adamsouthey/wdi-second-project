@@ -7,8 +7,6 @@
 }
 
 
-
-
 #buttonShow.btn{
   margin-left: 880px;
   margin-top: -320px;
@@ -26,7 +24,8 @@
 
 }
 .newDive{
-  margin-top: 30px;
+
+  width: 100%;
 }
 
 .fixbar {
@@ -189,7 +188,11 @@ img{
   h2, p, h4, h6{
     text-align: center;
     color: black;
-    font-size: 14px;
+    font-size: 2vw;
+    width: 100%;
+    margin-top: 20px;
+    margin: 0 auto;
+
   }
 
   #formComments{
@@ -230,7 +233,7 @@ text-align: center;
    font-family: Copperplate,Copperplate Gothic Light,fantasy;
 }
 
-html, body {
+body {
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHQhEop9bfbCB1tqMcxmk8hPYdV8jgElLSVq8xm1uL-jR0kVnU');
   background-size: 100% 100%;
   background-repeat: repeat;
@@ -268,9 +271,7 @@ p.form-title
     font-family: Copperplate,Copperplate Gothic Light,fantasy;
     font-size:2.5vw;
     font-weight: 900;
-    margin-left: -100px;
-    margin-right:-200px;
-    margin-bottom: -50px;
+
     color: black;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -284,8 +285,10 @@ p.form-title
 #addDiveTitle{
   margin-left: -20px;
   margin-bottom: 10px;
-  font-size: 2.5vw;
+  font-size: 1.2vw;
   margin: 0 auto;
+  width: 100%;
+
 }
 
 
@@ -314,7 +317,7 @@ form.login input[type="text"], form.login input[type="password"], form.login inp
 
 form.login input[type="submit"]
 {
-    width: 30%;
+    width: 100%;
     font-size: 1.2vw;
     text-transform: uppercase;
     font-weight: 500;
@@ -359,10 +362,6 @@ form.login a:hover
     color: #2ecc71;
 }
 
-form.login{
-  width: 500px;
-
-}
 
 
 
@@ -454,7 +453,7 @@ form.login{
  text-decoration: none;
  padding: 0 10px;
  color: #fff;
- font-size: 1.5vw;
+ font-size: 1.2vw;
  background-color: #000;
  }
 
@@ -470,8 +469,8 @@ form.login{
 
  .searchBar{
    float: right;
-   line-height: 22px;
-   margin-top: 5px;
+   line-height: 12px;
+
    margin-right: 10px;
    font-size: 1vw;
  }
@@ -506,8 +505,8 @@ form.login{
     .searchBar{
       // float: right;
       line-height: 2px;
-      margin-top: 10px;
-      margin-right: 6px;
+
+      margin-right: -10px;
       font-size: .8vw;
     }
   }
