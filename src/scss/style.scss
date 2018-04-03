@@ -3,7 +3,6 @@
   width: 80vw;
   margin-top: 20px;
   margin: 0 auto;
-
 }
 
 
@@ -122,18 +121,58 @@ img{
   line-height: 10px;
   margin-top: 20px;
    box-shadow: 0 0 10px 2px #282a2d;
-  }
 
 
 .thumbnail:hover {
   opacity:0.5;
+}
+}
+
+@media screen and (max-width: 768px) {
+  .thumbnail {
+    height: 10vh;
+    width: 12vh;
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
+    display: block;
+    // margin-left: auto;
+    // margin-right: auto;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    overflow:hidden;
+    margin-bottom: 4px;
+    line-height: 10px;
+     box-shadow: 0 0 10px 2px #282a2d;
+  }
+}
+@media screen and (max-width: 414px) {
+  .thumbnail {
+    height: 20vh;
+    width: 40vh;
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
+    display: block;
+    // margin-left: auto;
+    // margin-right: auto;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    overflow:hidden;
+    margin-bottom: 4px;
+    line-height: 10px;
+     box-shadow: 0 0 10px 2px #282a2d;
+   }
 }
 
   h2, p, h4, h6{
     text-align: center;
     color: black;
     font-size: 14px;
-
   }
 
   #formComments{
