@@ -29,23 +29,23 @@
 }
 
 .fixbar {
-    width: 100%;
-    height:30px;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    right:0;
-    height: 30px;
-    background: black;
-    z-index: 1;
+  width: 100%;
+  height:30px;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right:0;
+  height: 30px;
+  background: black;
+  z-index: 1;
 }
 #search {
-    position: absolute;
-    margin-right: 100px;
-    top: 0px;
-    width: 30px;
-    height: 22px;
-    z-index: 1;
+  position: absolute;
+  margin-right: 100px;
+  top: 0px;
+  width: 30px;
+  height: 22px;
+  z-index: 1;
 }
 
 .commentsForm{
@@ -62,14 +62,14 @@ img{
 }
 
 
- @media screen and (max-width: 414px) {
-   img{
-     height: 32vw;
-     width: 48vw;
-     margin-top: 20px;
-     margin: 0 auto;
-   }
- }
+@media screen and (max-width: 414px) {
+  img{
+    height: 32vw;
+    width: 48vw;
+    margin-top: 20px;
+    margin: 0 auto;
+  }
+}
 
 
 .showDive{
@@ -78,13 +78,13 @@ img{
 
 .showLeft{
   height: 200px;
- width: 250px;
- max-width: 100%;
- text-align: center;
- display: block;
-   margin-left: auto;
-   margin-right: auto;
-   margin-left: 600px;
+  width: 250px;
+  max-width: 100%;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-left: 600px;
 }
 
 .showLeftText{
@@ -136,12 +136,12 @@ img{
   margin-bottom: 4px;
   line-height: 10px;
   margin-top: 20px;
-   box-shadow: 0 0 10px 2px #282a2d;
+  box-shadow: 0 0 10px 2px #282a2d;
 
 
-.thumbnail:hover {
-  opacity:0.5;
-}
+  .thumbnail:hover {
+    opacity:0.5;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -161,7 +161,7 @@ img{
     overflow:hidden;
     margin-bottom: 4px;
     line-height: 10px;
-     box-shadow: 0 0 10px 2px #282a2d;
+    box-shadow: 0 0 10px 2px #282a2d;
   }
 }
 @media screen and (max-width: 414px) {
@@ -181,27 +181,27 @@ img{
     overflow:hidden;
     margin-bottom: 4px;
     line-height: 10px;
-     box-shadow: 0 0 10px 2px #282a2d;
-   }
+    box-shadow: 0 0 10px 2px #282a2d;
+  }
 }
 
-  h2, p, h4, h6{
-    text-align: center;
-    color: black;
-    font-size: 2vw;
-    width: 100%;
-    margin-top: 20px;
-    margin: 0 auto;
+h2, p, h4, h6{
+  text-align: center;
+  color: black;
+  font-size: 2vw;
+  width: 100%;
+  margin-top: 20px;
+  margin: 0 auto;
 
-  }
+}
 
-  #formComments{
-    font-size: 10px;
-    margin-left: 300px;
-    margin-top: -160px;
-    position:fixed;
-    text-align: center;
-  }
+#formComments{
+  font-size: 10px;
+  margin-left: 300px;
+  margin-top: -160px;
+  position:fixed;
+  text-align: center;
+}
 
 .btn{
   vertical-align: middle;
@@ -218,68 +218,77 @@ img{
   margin-left:800px;
 
   box-shadow:inset 0 0 5px 5px #888;
- background: #fff;
+  background: #fff;
 }
 
 
 .indexHeader{
-text-align: center;
+  text-align: center;
 }
 
 .indexHeaderTitle{
   font-size: 3vw;
   margin-top: 30px;
   margin-bottom: 30px;
-   font-family: Copperplate,Copperplate Gothic Light,fantasy;
+  font-family: Copperplate,Copperplate Gothic Light,fantasy;
 }
 
 body {
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHQhEop9bfbCB1tqMcxmk8hPYdV8jgElLSVq8xm1uL-jR0kVnU');
   background-size: 100% 100%;
   background-repeat: repeat;
-
   margin: 0;
   background-position: cover;
-
   &.homepage {
     background: url('https://i.imgur.com/x6WnfYl.jpg') fixed;
-     background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-size: 100% auto;
-  background-position: center;
-  height: 100%;
-  width: 100%;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 320px) {
+  .homepage {
+    background: url('https://i.imgur.com/x6WnfYl.jpg') fixed;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    height: 100%;
+    width: 100%;
     padding: 0;
     margin: 0;
   }
 }
 
 
-
 .wrap
 {
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
 }
 
 p.form-title
 {
-    font-family: Copperplate,Copperplate Gothic Light,fantasy;
-    font-size:2.5vw;
-    font-weight: 900;
+  font-family: Copperplate,Copperplate Gothic Light,fantasy;
+  font-size:2.5vw;
+  font-weight: 900;
 
-    color: black;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    margin-left: 2px;
-    clear: both;
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-left: 2px;
+  clear: both;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #addDiveTitle{
@@ -294,72 +303,72 @@ p.form-title
 
 form.login input[type="text"], form.login input[type="password"], form.login input[type="email"], form.login input[type="number"]
 {
-    width: 100%;
+  width: 100%;
 
-    background: 0;
-    border: 0;
-    border-bottom: 1px solid #FFFFFF;
-    outline: 0;
-    font-style: italic;
-    font-size: 1.2vw;
-    font-weight: 600;
-    letter-spacing: 2px;
-    margin-bottom: 0px;
-    margin-top: 20px;
+  background: 0;
+  border: 0;
+  border-bottom: 1px solid #FFFFFF;
+  outline: 0;
+  font-style: italic;
+  font-size: 1.2vw;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 0px;
+  margin-top: 20px;
 
-    color: #FFFFFF;
-    outline: 0;
-    color: black;
-    line-height: 50px;
+  color: #FFFFFF;
+  outline: 0;
+  color: black;
+  line-height: 50px;
 }
 
 
 
 form.login input[type="submit"]
 {
-    width: 100%;
-    font-size: 1.2vw;
-    text-transform: uppercase;
-    font-weight: 500;
-    margin-top: 16px;
-    outline: 0;
-    cursor: pointer;
-    letter-spacing: 1px;
+  width: 100%;
+  font-size: 1.2vw;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 16px;
+  outline: 0;
+  cursor: pointer;
+  letter-spacing: 1px;
 }
 
 form.login input[type="submit"]:hover
 {
-    transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
 }
 
 form.login .remember-forgot
 {
-    float: left;
-    width: 100%;
-    margin: 10px 0 0 0;
+  float: left;
+  width: 100%;
+  margin: 10px 0 0 0;
 }
 form.login .forgot-pass-content
 {
-    min-height: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  min-height: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 form.login label, form.login a
 {
-    font-size: 12px;
-    font-weight: 800;
-    color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 800;
+  color: #FFFFFF;
 }
 
 form.login a
 {
-    transition: color 0.5s ease;
+  transition: color 0.5s ease;
 
 }
 
 form.login a:hover
 {
-    color: #2ecc71;
+  color: #2ecc71;
 }
 
 
@@ -367,67 +376,67 @@ form.login a:hover
 
 .pr-wrap
 {
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    display: none;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
 }
 
 .show-pass-reset
 {
-    display: block !important;
+  display: block !important;
 }
 
 .pass-reset
 {
-    margin: 0 auto;
-    width: 250px;
-    // position: relative;
-    margin-top: 22%;
-    z-index: 999;
-    background: #FFFFFF;
-    padding: 20px 15px;
+  margin: 0 auto;
+  width: 250px;
+  // position: relative;
+  margin-top: 22%;
+  z-index: 999;
+  background: #FFFFFF;
+  padding: 20px 15px;
 }
 
 .pass-reset label
 {
-    font-size: 12px;
-    font-weight: 400;
-    margin-bottom: 15px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 15px;
 }
 
 
 
 .pass-reset input[type="submit"]
 {
-    width: 100%;
-    border: 0;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 500;
-    margin-top: 10px;
-    outline: 0;
-    cursor: pointer;
-    letter-spacing: 1px;
+  width: 100%;
+  border: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 10px;
+  outline: 0;
+  cursor: pointer;
+  letter-spacing: 1px;
 }
 
 .pass-reset input[type="submit"]:hover
 {
-    transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
 }
 .posted-by
 {
-    position: absolute;
-    bottom: 26px;
-    margin: 0 auto;
-    color: #FFF;
-    background-color: rgba(0, 0, 0, 0.66);
-    padding: 10px;
-    left: 45%;
+  position: absolute;
+  bottom: 26px;
+  margin: 0 auto;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.66);
+  padding: 10px;
+  left: 45%;
 }
 
 .img-circle avatar{
@@ -435,106 +444,106 @@ form.login a:hover
 }
 
 #navbar ul {
- margin: 0;
- padding: 5px;
- list-style-type: none;
- text-align: left;
- background-color: #000;
+  margin: 0;
+  padding: 5px;
+  list-style-type: none;
+  text-align: left;
+  background-color: #000;
 
- font-family: Copperplate,Copperplate Gothic Light,fantasy;
+  font-family: Copperplate,Copperplate Gothic Light,fantasy;
 
- }
+}
 
 #navbar ul li {
- display: inline;
- }
+  display: inline;
+}
 
 #navbar ul li a {
- text-decoration: none;
- padding: 0 10px;
- color: #fff;
- font-size: 1.2vw;
- background-color: #000;
- }
+  text-decoration: none;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 1.2vw;
+  background-color: #000;
+}
 
 #navbar ul li a:hover {
- color: #000;
- background-color: #fff;
- }
+  color: #000;
+  background-color: #fff;
+}
 
 #editShow #deleteShow{
   color: #7FDBFF;
   text-decoration: none;
 }
 
- .searchBar{
-   float: right;
-   line-height: 12px;
+.searchBar{
+  float: right;
+  line-height: 12px;
 
-   margin-right: 10px;
-   font-size: 1vw;
- }
+  margin-right: 10px;
+  font-size: 1vw;
+}
 
- @media screen and (max-width: 768px) {
-   .buttonSearch{
-     color: white;
-   }
- }
- @media screen and (max-width: 768px) {
-   .searchBar{
-     float: right;
-     line-height: 10px;
-     margin-top: 8px;
-     margin-right: 26px;
-     font-size: 1vw;
-   }
- }
-
- @media screen and (max-width: 414px) {
-   .searchBar{
-     float: right;
-     line-height: 6px;
-     margin-top: 8px;
-     margin-right: 6px;
-     font-size: 1vw;
-   }
- }
-
-
-  @media screen and (max-width: 320px) {
-    .searchBar{
-      // float: right;
-      line-height: 2px;
-
-      margin-right: -10px;
-      font-size: .8vw;
-    }
+@media screen and (max-width: 768px) {
+  .buttonSearch{
+    color: white;
   }
+}
+@media screen and (max-width: 768px) {
+  .searchBar{
+    float: right;
+    line-height: 10px;
+    margin-top: 8px;
+    margin-right: 26px;
+    font-size: 1vw;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .searchBar{
+    float: right;
+    line-height: 6px;
+    margin-top: 8px;
+    margin-right: 6px;
+    font-size: 1vw;
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+  .searchBar{
+    // float: right;
+    line-height: 2px;
+
+    margin-right: -10px;
+    font-size: .8vw;
+  }
+}
 
 .user-container{
-   font-family: Copperplate,Copperplate Gothic Light,fantasy;
-   text-align: center;
+  font-family: Copperplate,Copperplate Gothic Light,fantasy;
+  text-align: center;
 }
 
 
 
 
 .comment-container{
-   font-family: Copperplate,Copperplate Gothic Light,fantasy;
+  font-family: Copperplate,Copperplate Gothic Light,fantasy;
   font-size: 14px;
   line-height: 20px;
-& p{
-  font-size: 18px;
-   font-family: Copperplate,Copperplate Gothic Light,fantasy;
-   color: #39CCCC;
-   & small{
-  float: left;
-   }
-}
+  & p{
+    font-size: 18px;
+    font-family: Copperplate,Copperplate Gothic Light,fantasy;
+    color: #39CCCC;
+    & small{
+      float: left;
+    }
+  }
 }
 
 .comment-form{
-   font-family: Copperplate,Copperplate Gothic Light,fantasy;
+  font-family: Copperplate,Copperplate Gothic Light,fantasy;
   font-size: 2vw;
   line-height: 20px;
   margin-top: 10px;
@@ -549,11 +558,11 @@ form.login a:hover
 }
 
 
- @media screen and (max-width: 414px) {
-   textarea{
-     height: 6vw;
-     width: 18vw;
-     margin-top: 20px;
-     margin: 0 auto;
-   }
- }
+@media screen and (max-width: 414px) {
+  textarea{
+    height: 6vw;
+    width: 18vw;
+    margin-top: 20px;
+    margin: 0 auto;
+  }
+}
