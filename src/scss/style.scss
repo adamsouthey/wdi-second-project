@@ -5,7 +5,10 @@
   margin: 0 auto;
   margin-bottom: 20px;
 }
-
+html{
+  height: 100%;
+  width: 100%;
+}
 
 #buttonShow.btn{
   margin-left: 880px;
@@ -101,14 +104,18 @@ img{
 }
 
 
-#jumbo{
+.jumbotron-fluid{
   background-color: black;
   background-size: cover;
   height: 10px;
   color: white;
   margin-bottom: 1px;
   width: 100%;
+  position:absolute;
+  left:0;
+  right:0;
 }
+
 
 
 .top-bar{
@@ -251,8 +258,10 @@ body {
     background-position:x1 y1, x2 y2;
   }
 }
-
-
+body.homepage{
+  height: auto;
+  width: auto;
+}
 
 .wrap
 {
@@ -361,6 +370,44 @@ form.login a:hover
   color: #2ecc71;
 }
 
+@media screen and (max-width: 768px) {
+  form.login input[type="text"], form.login input[type="password"], form.login input[type="email"], form.login input[type="number"]{
+  width: 100%;
+  background: 0;
+  border: 0;
+  border-bottom: 1px solid #FFFFFF;
+  outline: 0;
+  font-style: italic;
+  font-size: 2.2vw;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 0px;
+  margin-top: 20px;
+  color: #FFFFFF;
+  outline: 0;
+  color: black;
+  line-height: 50px;
+  }
+}
+@media screen and (max-width: 414px) {
+  form.login input[type="text"], form.login input[type="password"], form.login input[type="email"], form.login input[type="number"]{
+  width: 100%;
+  background: 0;
+  border: 0;
+  border-bottom: 1px solid #FFFFFF;
+  outline: 0;
+  font-style: italic;
+  font-size: 2.2vw;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 0px;
+  margin-top: 20px;
+  color: #FFFFFF;
+  outline: 0;
+  color: black;
+  line-height: 50px;
+  }
+}
 
 
 
@@ -469,14 +516,13 @@ form.login a:hover
 .searchBar{
   float: right;
   line-height: 12px;
-
   margin-right: 10px;
   font-size: 1vw;
 }
 
 @media screen and (max-width: 768px) {
   .buttonSearch{
-    color: white;
+  color: black;
   }
 }
 @media screen and (max-width: 768px) {
@@ -486,6 +532,8 @@ form.login a:hover
     margin-top: 8px;
     margin-right: 26px;
     font-size: 1vw;
+    color: black;
+
   }
 }
 

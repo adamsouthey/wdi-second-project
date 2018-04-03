@@ -1,27 +1,18 @@
-<div class="jumbotron jumbotron-fluid" id="jumbo">
-<div class="container">
-  <div class="row">
-    <div class="offset-md-1">
-    </div>
-    </div>
-    </div>
-
-
-    <div id="navbar">
+<div id="navbar">
   <ul>
-	<li><a id="docuDiveHome" href="/">DocuDive Home</a></li>
-	<li><a href="/dives">Logged Dives</a></li>
-  <% if(!locals.isLoggedIn) { %>
-	<li><a href="/register">Register</a></li>
-	<li><a href="/login">Login</a></li>
-    <% } else { %>
-	<li><a href="/dives/new">Share your Dive Experience</a></li>
-	<li><a href="/logout">Logout</a></li>
-    <% } %>
-    <form class="searchBar" action="/search" method="GET">
-    <li><input name="location" type="search" placeholder="Search By Location" aria-label="Search"></li>
+    <li><a id="docuDiveHome" href="/">DocuDive Home</a></li>
+    <li><a href="/dives">Logged Dives</a></li>
+    <% if(!locals.isLoggedIn) { %>
+      <li><a href="/register">Register</a></li>
+      <li><a href="/login">Login</a></li>
+      <% } else { %>
+        <li><a href="/dives/new">Share your Dive Experience</a></li>
+        <li><a href="/logout">Logout</a></li>
+        <% } %>
+        <form class="searchBar" action="/search" method="GET">
+          <li><input name="location" type="search" placeholder="Search By Location" aria-label="Search"></li>
           <li><input name="stars" type="search" placeholder="Search By Rating" aria-label="Search">  </li>
-    <button class="buttonSearch" type="submit">Search</button>
-    </form>
-  </ul>
-</div>
+          <button class="buttonSearch" type="submit">Search</button>
+        </form>
+      </ul>
+    </div>
